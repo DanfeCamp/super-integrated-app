@@ -41,7 +41,7 @@ const FAQAccordion = () => {
         FAQ
       </h2>
 
-      {/* FAQs */}
+      {/* FAQ */}
       <div className="w-full">
         {/* FAQ: 1 */}
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>

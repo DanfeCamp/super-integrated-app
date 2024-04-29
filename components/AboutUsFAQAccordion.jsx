@@ -29,7 +29,7 @@ function Icon({ id, open }) {
   );
 }
 
-const FAQAccordion = () => {
+const AboutUsFAQAccordion = () => {
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
@@ -37,9 +37,9 @@ const FAQAccordion = () => {
   return (
     <div>
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 my-4 sm:my-6">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 my-4 sm:my-6">
         FAQ
-      </h2>
+      </h1>
 
       {/* FAQ */}
       <div className="w-full">
@@ -141,4 +141,4 @@ const FAQAccordion = () => {
   );
 };
 
-export default FAQAccordion;
+export default AboutUsFAQAccordion;

@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const FooterWithLogo = () => {
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full bg-white mt-8 sm:mt-4">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
-        <Link href="/">
+        <Link href="/" className="hidden sm:inline-block">
           <img src="/img/logo.png" alt="logo" className="w-6" />
         </Link>
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">

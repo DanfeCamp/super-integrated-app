@@ -4,12 +4,13 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import Link from "next/link";
 
 import TeamMembers from "@components/TeamMembers";
-import FAQAccordion from "@components/FAQAccordion";
+import FAQAccordion from "@components/AboutUsFAQAccordion";
 
 const AboutUs = () => {
   return (
     <>
-      <Breadcrumbs className="m-0">
+      {/* Breadcrumbs */}
+      <Breadcrumbs>
         <Link href="/" className="opacity-80">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +25,20 @@ const AboutUs = () => {
           <span>About Us</span>
         </Link>
       </Breadcrumbs>
+
+      <div class="flex flex-col w-full">
+        {/* Title */}
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 my-4 sm:my-6">
+          Super Integrated App
+        </h1>
+        <p class="leading-relaxed text-base">
+          Super Integrated App (SIA) is a comprehensive web platform providing
+          free access to a diverse set of tools, all available in one central
+          location. Simplify your online experience by utilizing a range of
+          tools designed to meet different needs. Explore the possibilities with
+          SIA, where convenience meets functionality.
+        </p>
+      </div>
 
       {/* Team Members */}
       <TeamMembers />

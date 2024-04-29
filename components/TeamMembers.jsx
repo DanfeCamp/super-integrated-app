@@ -15,12 +15,12 @@ const TeamMembers = () => {
   return (
     <div>
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 my-4 sm:my-6">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 my-4 sm:my-6">
         Our Team
-      </h2>
+      </h1>
 
       {/* Team Members */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {/* Member: 1 */}
         <Card className="w-full bg-white mx-auto">
           <CardHeader floated={false} className="h-72">

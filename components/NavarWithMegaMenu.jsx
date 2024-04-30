@@ -31,6 +31,8 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
+import Search from "./Search";
+
 const navListMenuItems = [
   {
     title: "Products",
@@ -129,7 +131,7 @@ const NavListMenu = () => {
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
-              Apps
+              Categories
               <ChevronDownIcon
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -217,12 +219,13 @@ const NavbarWithMegaMenu = () => {
 
         {/* End */}
         <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
+          {/* <Button variant="text" size="sm" color="blue-gray">
             Log In
           </Button>
           <Button variant="gradient" size="sm">
             Sign In
-          </Button>
+          </Button> */}
+          <Search />
         </div>
 
         <IconButton
@@ -241,12 +244,13 @@ const NavbarWithMegaMenu = () => {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+          {/* <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
             Log In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>
             Sign In
-          </Button>
+          </Button> */}
+          <Search />
         </div>
       </Collapse>
     </Navbar>

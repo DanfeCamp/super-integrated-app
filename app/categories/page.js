@@ -1,12 +1,12 @@
 import Breadcrumb from "@components/Breadcrumb";
 
 export const metadata = {
-  title: "SIA - Apps",
+  title: "SIA - Categories",
   description: "",
 };
 
-const Apps = () => {
-  const paths = [{ link: "/apps", title: "Apps" }];
+const Categories = () => {
+  const paths = [{ link: "/categories", title: "Categories" }];
 
   return (
     <>
@@ -15,4 +15,4 @@ const Apps = () => {
   );
 };
 
-export default Apps;
+export default Categories;

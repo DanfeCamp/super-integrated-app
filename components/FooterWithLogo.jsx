@@ -14,11 +14,11 @@ const FooterWithLogo = () => {
           <li>
             <Typography
               as="a"
-              href="/apps"
+              href="/categories"
               color="blue-gray"
               className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              Apps
+              Categories
             </Typography>
           </li>
           <li>

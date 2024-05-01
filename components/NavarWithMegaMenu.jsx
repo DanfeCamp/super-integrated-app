@@ -127,7 +127,7 @@ const NavListMenu = () => {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 text-gray-900 font-medium text-base"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -169,7 +169,7 @@ const NavList = () => {
         href="/about-us"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-medium text-base"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           About Us
@@ -180,7 +180,7 @@ const NavList = () => {
         href="/contact-us"
         variant="small"
         color="blue-gray"
-        className="font-medium"
+        className="font-medium text-base"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           Contact Us
@@ -200,60 +200,62 @@ const NavbarWithMegaMenu = () => {
   }, []);
 
   return (
-    <Navbar className="w-full px-4 py-2">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        {/* Start */}
-        <Typography
-          as="a"
-          href="/"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Super Integrated App
-        </Typography>
+    <div className="px-4">
+      <Navbar className="w-full px-4 py-2 sm:py-3">
+        <div className="flex items-center justify-between text-blue-gray-900">
+          {/* Start */}
+          <Typography
+            as="a"
+            href="/"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            Super Integrated App
+          </Typography>
 
-        {/* Center */}
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
+          {/* Center */}
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
 
-        {/* End */}
-        <div className="hidden gap-2 lg:flex">
-          {/* <Button variant="text" size="sm" color="blue-gray">
+          {/* End */}
+          <div className="hidden gap-2 lg:flex">
+            {/* <Button variant="text" size="sm" color="blue-gray">
             Log In
           </Button>
           <Button variant="gradient" size="sm">
             Sign In
           </Button> */}
-          <Search />
-        </div>
+            <Search />
+          </div>
 
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          {/* <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
+          <NavList />
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            {/* <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
             Log In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>
             Sign In
           </Button> */}
-          <Search />
-        </div>
-      </Collapse>
-    </Navbar>
+            <Search />
+          </div>
+        </Collapse>
+      </Navbar>
+    </div>
   );
 };
 

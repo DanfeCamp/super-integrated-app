@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Container>
           <Navbar />
-          <div className="container mx-auto py-8 flex flex-col gap-6">
-            {children}
-          </div>
+          <div className="container mx-auto px-4 py-8">{children}</div>
           <Footer />
         </Container>
       </body>

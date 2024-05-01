@@ -1,5 +1,5 @@
 export const APPS = [
-  { title: "Quotes", link: "/apps/quotes" },
-  { title: "Jokes", link: "/apps/jokes" },
-  { title: "Timer", link: "/apps/timer" },
+  { title: "Quotes", link: "/apps/quotes", category: "" },
+  { title: "Jokes", link: "/apps/jokes", category: "" },
+  { title: "Timer", link: "/apps/timer", category: "" },
 ];

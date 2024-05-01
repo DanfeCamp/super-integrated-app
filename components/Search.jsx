@@ -3,9 +3,9 @@
 /**
  * External dependencies.
  */
-import React, { useCallback, useState } from "react";
-import Select from "react-select";
+import React, { useCallback, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Select from "react-select";
 
 /**
  * Internal dependencies.
@@ -15,6 +15,7 @@ import { APPS } from "@utils";
 const Search = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const bodyRef = useRef(typeof window !== "undefined" ? document.body : null);
 
   const router = useRouter();
   const maxNumberOfSuggestion = 5;
@@ -50,18 +51,16 @@ const Search = () => {
   const customStyles = {
     menu: (provided) => ({
       ...provided,
-      ...{
-        "& ::-webkit-scrollbar": {
-          height: "100%",
-          width: "5px",
-          marginLeft: "5px",
-        },
-        "& ::-webkit-scrollbar-thumb": {
-          backgroundColor: "var(--nav-color)",
-        },
-        "& ::-webkit-scrollbar-track, & ::-webkit-scrollbar-thumb": {
-          borderRadius: "21px",
-        },
+      "& ::-webkit-scrollbar": {
+        height: "100%",
+        width: "5px",
+        marginLeft: "5px",
+      },
+      "& ::-webkit-scrollbar-thumb": {
+        backgroundColor: "var(--nav-color)",
+      },
+      "& ::-webkit-scrollbar-track, & ::-webkit-scrollbar-thumb": {
+        borderRadius: "21px",
       },
     }),
   };
@@ -73,7 +72,7 @@ const Search = () => {
         onChange={handleSelectChange}
         onInputChange={handleInputChange}
         instanceId="select-box"
-        className="w-full"
+        className="w-full text-sm"
         isClearable={true}
         escapeClearsValue={true}
         options={suggestions}
@@ -84,6 +83,8 @@ const Search = () => {
         }}
         styles={customStyles}
         maxMenuHeight={400}
+        menuPortalTarget={bodyRef?.current}
+        menuPosition="fixed"
       />
     </div>
   );

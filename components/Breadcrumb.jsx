@@ -19,7 +19,7 @@ const Breadcrumb = ({ paths }) => {
 
       {paths.map((path) => {
         return (
-          <Link href={path.link} className="opacity-80">
+          <Link key={path.link} href={path.link} className="opacity-80">
             <span>{path.title}</span>
           </Link>
         );

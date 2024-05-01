@@ -17,26 +17,40 @@ const ContactUs = () => {
       <Breadcrumb paths={paths} />
 
       {/* Contact */}
-      <section>
-        <div className="relative h-[300px] rounded overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/171.jpg')]"></div>
+      <section className="py-1">
+        <div className="relative h-[300px] rounded overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('/img/contact-us-bg.jpg')]"></div>
         <div className="container px-6 md:px-12">
           <div className="block rounded-lg bg-[hsla(0,0%,100%,0.7)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
             <div className="flex justify-center">
               <div className="mb-12 flex gap-6">
-                <a target="_blank" href="https://github.com/DanfeCamp">
+                <a
+                  target="_blank"
+                  href="https://github.com/DanfeCamp"
+                  title="GitHub"
+                >
                   <FontAwesomeIcon icon={faGithub} size="2xl" />
                   {/* <h6 className="font-medium">DanfeCamp</h6> */}
                 </a>
-                <a target="_blank" href="https://www.facebook.com/DanfeCamp">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/DanfeCamp"
+                  title="Facebook"
+                >
                   <FontAwesomeIcon icon={faFacebook} size="2xl" />
                   {/* <h6 className="font-medium">DanfeCamp</h6> */}
                 </a>
-                <a target="_blank" href="https://www.instagram.com/DanfeCamp">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/DanfeCamp"
+                  title="Instagram"
+                >
                   <FontAwesomeIcon icon={faInstagram} size="2xl" />
                   {/* <h6 className="font-medium">DanfeCamp</h6> */}
                 </a>
               </div>
             </div>
+
+            {/* Contact Form */}
             <div className="mx-auto max-w-[700px]">
               <form>
                 <div className="relative mb-6">
@@ -48,7 +62,7 @@ const ContactUs = () => {
                   />
                   <label
                     className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    for="exampleInput90"
+                    htmlFor="exampleInput90"
                   >
                     Name
                   </label>
@@ -62,7 +76,7 @@ const ContactUs = () => {
                   />
                   <label
                     className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                    for="exampleInput91"
+                    htmlFor="exampleInput91"
                   >
                     Email address
                   </label>
@@ -75,7 +89,7 @@ const ContactUs = () => {
                     placeholder="Your message"
                   ></textarea>
                   <label
-                    for="exampleFormControlTextarea1"
+                    htmlFor="exampleFormControlTextarea1"
                     className="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
                   >
                     Message

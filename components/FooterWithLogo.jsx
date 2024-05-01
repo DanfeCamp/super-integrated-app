@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const FooterWithLogo = () => {
   return (
-    <footer className="w-full bg-white mt-8 sm:mt-4">
+    <footer className="w-full bg-white px-4 mt-2 sm:mt-4">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
         <Link href="/" className="hidden sm:inline-block">
           <img src="/img/logo.png" alt="logo" className="w-6" />
@@ -16,7 +16,7 @@ const FooterWithLogo = () => {
               as="a"
               href="/categories"
               color="blue-gray"
-              className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="block antialiased font-sans leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
             >
               Categories
             </Typography>
@@ -26,7 +26,7 @@ const FooterWithLogo = () => {
               as="a"
               href="/about-us"
               color="blue-gray"
-              className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="block antialiased font-sans leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
             >
               About Us
             </Typography>
@@ -36,7 +36,7 @@ const FooterWithLogo = () => {
               as="a"
               href="/contact-us"
               color="blue-gray"
-              className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
+              className="block antialiased font-sans leading-normal text-blue-gray-900 font-medium transition-colors hover:text-blue-500 focus:text-blue-500"
             >
               Contact Us
             </Typography>
@@ -46,7 +46,7 @@ const FooterWithLogo = () => {
       <hr className="my-2 sm:my-4 border-blue-gray-50" />
       <Typography
         color="blue-gray"
-        className="text-center block antialiased font-sans text-sm leading-normal"
+        className="text-center block antialiased font-sans leading-normal"
       >
         Made with ❤️ by{" "}
         <a href="https://danfecamp.com" className="underline" target="_blank">

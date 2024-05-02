@@ -1,14 +1,16 @@
 "use client";
 
+/**
+ * External dependencies.
+ */
 import { useState } from "react";
-import Link from "next/link";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
 
-function Icon({ id, open }) {
+const Icon = ({ id, open }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +29,7 @@ function Icon({ id, open }) {
       />
     </svg>
   );
-}
+};
 
 const qna = [
   {

@@ -1,3 +1,6 @@
+/**
+ * Internal dependencies.
+ */
 import Breadcrumb from "@components/Breadcrumb";
 import FAQAccordion from "@components/AboutUsFAQAccordion";
 

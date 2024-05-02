@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * External dependencies.
+ */
 import { Card, CardBody, Typography, ListItem } from "@material-tailwind/react";
 import { useRouter } from "next/navigation";
 

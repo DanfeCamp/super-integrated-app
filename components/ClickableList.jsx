@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+/**
+ * External dependencies.
+ */
 import Link from "next/link";
 import { ListItem, ListItemPrefix, Typography } from "@material-tailwind/react";
 

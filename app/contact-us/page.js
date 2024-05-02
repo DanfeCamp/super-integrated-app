@@ -1,12 +1,19 @@
 "use client";
 
-import Breadcrumb from "@components/Breadcrumb";
+/**
+ * External dependencies.
+ */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+
+/**
+ * Internal dependencies.
+ */
+import Breadcrumb from "@components/Breadcrumb";
 
 const ContactUs = () => {
   const paths = [{ link: "/contact-us", title: "Contact Us" }];

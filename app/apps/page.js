@@ -1,11 +1,12 @@
-import React from "react";
-
+/**
+ * Internal dependencies.
+ */
 import Breadcrumb from "@components/Breadcrumb";
 import ClickableList from "@components/ClickableList";
 import { LIST_OF_APPS } from "@utils/constants";
 
 const ListOfApps = () => {
-  const paths = [{ link: "/list-of-apps", title: "Apps" }];
+  const paths = [{ link: "/apps", title: "Apps" }];
 
   return (
     <Breadcrumb paths={paths}>

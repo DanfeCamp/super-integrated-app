@@ -1,6 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+/**
+ * Internal dependencies.
+ */
 import AppCard from "@components/AppCard";
 import { LIST_OF_APPS } from "@utils";
 

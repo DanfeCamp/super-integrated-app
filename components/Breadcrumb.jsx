@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * External dependencies.
+ */
 import Link from "next/link";
 import { Breadcrumbs } from "@material-tailwind/react";
 

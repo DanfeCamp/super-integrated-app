@@ -10,7 +10,7 @@ import Select from "react-select";
 /**
  * Internal dependencies.
  */
-import { APPS } from "@utils";
+import { LIST_OF_APPS } from "@utils";
 
 const Search = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -19,7 +19,7 @@ const Search = () => {
 
   const router = useRouter();
   const maxNumberOfSuggestion = 5;
-  const options = APPS.map((option) => {
+  const options = LIST_OF_APPS.map((option) => {
     return {
       value: option.link,
       label: option.title,

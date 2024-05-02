@@ -12,11 +12,7 @@ const ContactUs = () => {
   const paths = [{ link: "/contact-us", title: "Contact Us" }];
 
   return (
-    <>
-      {/* Breadcrumbs */}
-      <Breadcrumb paths={paths} />
-
-      {/* Contact */}
+    <Breadcrumb paths={paths}>
       <section className="py-1">
         <div className="relative h-[300px] rounded overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('/img/contact-us-bg.jpg')]"></div>
         <div className="container px-6 md:px-12">
@@ -106,7 +102,7 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-    </>
+    </Breadcrumb>
   );
 };
 

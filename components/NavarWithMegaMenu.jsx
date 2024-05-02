@@ -163,6 +163,15 @@ const NavListMenu = () => {
 const NavList = () => {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <Typography
+        as="a"
+        href="/list-of-apps"
+        variant="small"
+        color="blue-gray"
+        className="font-medium text-base"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Apps</ListItem>
+      </Typography>
       <NavListMenu />
       <Typography
         as="a"

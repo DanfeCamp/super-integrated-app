@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ListItem, ListItemPrefix, Typography } from "@material-tailwind/react";
 
-const ClickableList = ({ title, icon, link, category }) => {
+const ClickableList = ({ title, icon, link, categories }) => {
   return (
     <Link href={link}>
       <ListItem>
@@ -18,7 +18,7 @@ const ClickableList = ({ title, icon, link, category }) => {
             {title}
           </Typography>
           <Typography variant="small" color="gray" className="font-normal">
-            {category.join(", ")}
+            {categories.join(", ")}
           </Typography>
         </div>
       </ListItem>

@@ -7,11 +7,11 @@ const AppCard = ({ title, link, description }) => {
   const router = useRouter();
   return (
     <Card
-      className="w-full h-full"
+      className="w-full h-full border"
       onClick={() => router.push(link)}
       role="button"
     >
-      <ListItem className="w-full h-full">
+      <ListItem className="w-full h-full p-0">
         <CardBody>
           <Typography variant="h6" className="mb-2 text-gray-900">
             {title}

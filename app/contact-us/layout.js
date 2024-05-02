@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "SIA - Contact Us",
+  title: "Contact Us",
   description: "",
 };
 

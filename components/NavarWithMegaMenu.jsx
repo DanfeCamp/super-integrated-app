@@ -31,7 +31,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
-import Search from "./Search";
+import AppSearch from "./AppSearch";
 
 const navListMenuItems = [
   {
@@ -165,14 +165,25 @@ const NavList = () => {
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
         as="a"
-        href="/list-of-apps"
+        href="/apps"
         variant="small"
         color="blue-gray"
         className="font-medium text-base"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">Apps</ListItem>
       </Typography>
-      <NavListMenu />
+      {/* <NavListMenu /> */}
+      <Typography
+        as="a"
+        href="/categories"
+        variant="small"
+        color="blue-gray"
+        className="font-medium text-base"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Categories
+        </ListItem>
+      </Typography>
       <Typography
         as="a"
         href="/about-us"
@@ -235,7 +246,7 @@ const NavbarWithMegaMenu = () => {
           <Button variant="gradient" size="sm">
             Sign In
           </Button> */}
-            <Search />
+            <AppSearch />
           </div>
 
           <IconButton
@@ -260,7 +271,7 @@ const NavbarWithMegaMenu = () => {
           <Button variant="gradient" size="sm" fullWidth>
             Sign In
           </Button> */}
-            <Search />
+            <AppSearch />
           </div>
         </Collapse>
       </Navbar>

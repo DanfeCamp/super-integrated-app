@@ -7,3 +7,26 @@
   border-radius: 8px !important;
 }
 /* Search End */
+
+/* Scrollbar */
+/* Bar */
+.sia-scrollbar::-webkit-scrollbar {
+  height: 100%;
+  width: 8px;
+}
+
+/* Track */
+.sia-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.sia-scrollbar-light::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #b4b4b4;
+}
+.sia-scrollbar-dark::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #6d6d6d;
+}
+/* Scrollbar End */

@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@material-tailwind/react";
 
 const Breadcrumb = ({ paths, children }) => {
   return (
-    <div>
+    <div className="flex flex-col gap-4 sm:gap-8">
       <Breadcrumbs>
         <Link href="/" className="opacity-80">
           <svg
@@ -29,7 +29,7 @@ const Breadcrumb = ({ paths, children }) => {
           );
         })}
       </Breadcrumbs>
-      <div className="py-4 sm:py-8">{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

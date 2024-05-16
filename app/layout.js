@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + " sia-scrollbar sia-scrollbar-light"}>
         <Container>
           <Navbar />
           <div className="container mx-auto px-4 py-8">{children}</div>

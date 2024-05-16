@@ -24,7 +24,7 @@ const SitemapPreview = ({ urls }) => {
   });
 
   return (
-    <div className="p-4 bg-gray-900 rounded-md max-h-[500px] overflow-y-scroll sia-scrollbar sia-scrollbar-dark">
+    <div className="p-4 bg-gray-900 shadow-sm rounded-md max-h-[500px] overflow-y-scroll sia-scrollbar sia-scrollbar-dark">
       <pre className="text-gray-200 text-sm">
         <p>
           <span className="text-gray-400">{"<?"}</span>

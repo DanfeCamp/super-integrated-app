@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className + " sia-scrollbar sia-scrollbar-light"}>
         <Container>
           <Navbar />
-          <div className="container mx-auto px-4 py-8">{children}</div>
+          <div className="mx-auto px-4 py-8 w-full">{children}</div>
           <Footer />
         </Container>
       </body>

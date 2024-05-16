@@ -4,9 +4,6 @@
  * External dependencies.
  */
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
-import { faArrowsRotate, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Internal dependencies.
@@ -23,7 +20,7 @@ const PasswordGenerator = () => {
   const minimumNumberOfCharacter = 4;
   const maximumNumberOfCharacter = 32;
 
-  const [icon, setIcon] = useState(faCopy);
+  const [copyText, setCopyText] = useState("Copy");
   const [password, setPassword] = useState("");
   const [hasUppercase, setHasUppercase] = useState(true);
   const [hasLowercase, setHasLowercase] = useState(true);
@@ -73,10 +70,10 @@ const PasswordGenerator = () => {
   };
 
   const copyToClipboard = () => {
-    setIcon(faCheck);
+    setCopyText("Copied!");
     navigator.clipboard.writeText(password);
     setTimeout(() => {
-      setIcon(faCopy);
+      setCopyText("Copy");
     }, 1000);
   };
 
@@ -210,27 +207,29 @@ const PasswordGenerator = () => {
         </div>
 
         {/* Generated Password */}
-        <div className="rounded-md border shadow-sm w-full p-4 text-lg">
-          <code className="text-xl sm:text-2xl break-words">{password}</code>
-        </div>
+        <div>
+          <div className="rounded-md border shadow-sm w-full p-4 text-lg">
+            <code className="text-xl sm:text-2xl break-words">{password}</code>
+          </div>
 
-        {/* Buttons */}
-        <div className="flex justify-end">
-          <div className="flex gap-4">
-            <button
-              className="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-lg py-2 px-4 rounded-lg bg-blue-600 text-white hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-              type="button"
-              onClick={copyToClipboard}
-            >
-              <FontAwesomeIcon icon={icon} />
-            </button>
-            <button
-              className="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-lg py-2 px-4 rounded-lg bg-blue-600 text-white hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-              type="button"
-              onClick={generatePassword}
-            >
-              <FontAwesomeIcon icon={faArrowsRotate} />
-            </button>
+          {/* Buttons */}
+          <div className="flex justify-end mt-4">
+            <div className="flex gap-4">
+              <button
+                className="align-middle select-none font-sans font-medium text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-2 px-4 rounded-lg bg-blue-600 text-white hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                type="button"
+                onClick={copyToClipboard}
+              >
+                {copyText}
+              </button>
+              <button
+                className="align-middle select-none font-sans font-medium text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-2 px-4 rounded-lg bg-blue-600 text-white hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                type="button"
+                onClick={generatePassword}
+              >
+                Generate
+              </button>
+            </div>
           </div>
         </div>
 
@@ -261,31 +260,20 @@ const PasswordGenerator = () => {
               security of the password.
             </li>
             <li className="ml-4">
-              Click the "
-              <FontAwesomeIcon
-                icon={faArrowsRotate}
-                className="inline h-4 w-4"
-              />
-              " button to create a password based on the selected length and
-              character sets.
+              Click the "<code>Generate</code>" button to create a password
+              based on the selected length and character sets.
             </li>
             <li className="ml-4">
               The generated password will be displayed in the text field.
             </li>
             <li className="ml-4">
-              Click the "
-              <FontAwesomeIcon icon={faCopy} className="inline h-4 w-4" />"
-              button next to the generated password to copy it to the clipboard
-              for easy usage.
+              Click the "<code>Copy</code>" button next to the generated
+              password to copy it to the clipboard for easy usage.
             </li>
             <li className="ml-4">
               If the generated password does not meet your requirements or
-              preferences, click the "
-              <FontAwesomeIcon
-                icon={faArrowsRotate}
-                className="inline h-4 w-4"
-              />
-              " button again to generate a new one.
+              preferences, click the "<code>Generate</code>" button again to
+              generate a new one.
             </li>
             <li className="ml-4">
               Aim for a balance between password length and complexity for

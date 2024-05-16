@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const SortLists = () => {
+  return <div>SortLists</div>;
 };
 
-export default page;
+export default SortLists;

@@ -18,8 +18,8 @@ const SitemapCompiler = () => {
     { link: "/sitemap-compiler", title: "Sitemap Compiler" },
   ];
 
-  const [text, setText] = useState("");
-  const [urls, setUrls] = useState([]);
+  const [text, setText] = useState("https://superintegrateapp.com");
+  const [urls, setUrls] = useState(["https://superintegrateapp.com"]);
 
   const isValidUrl = (urlString) => {
     try {
@@ -78,13 +78,25 @@ const SitemapCompiler = () => {
             <SitemapPreview urls={urls} />
           </div>
           <div className="mt-4 sm:mt-8 flex justify-end">
-            <button
-              class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-              type="button"
-              onClick={downloadSitemap}
-            >
-              Download
-            </button>
+            <div className="flex gap-4 sm:gap-8">
+              <button
+                class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                type="button"
+                onClick={() => {
+                  setText("");
+                  setUrls([]);
+                }}
+              >
+                Clear
+              </button>
+              <button
+                class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                type="button"
+                onClick={downloadSitemap}
+              >
+                Download
+              </button>
+            </div>
           </div>
         </div>
 

@@ -230,7 +230,7 @@ const PasswordGenerator = () => {
 
         {/* Generated Password */}
         <div className="rounded-md border shadow-sm w-full p-4 text-lg">
-          <code className="text-xl sm:text-2xl">{password}</code>
+          <code className="text-xl sm:text-2xl break-words">{password}</code>
         </div>
 
         {/* Buttons */}

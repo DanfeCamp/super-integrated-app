@@ -3,7 +3,7 @@
 /**
  * External dependencies.
  */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 /**
  * Internal dependencies.
@@ -33,18 +33,29 @@ const Timer = () => {
     setTime(0);
   };
 
-  const formatTime = () => {
-    const milliseconds = Math.floor((time % 1000) / 10); // Get milliseconds up to two digits
-    const seconds = Math.floor((time / 1000) % 60);
-    const minutes = Math.floor((time / (1000 * 60)) % 60);
-    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+  const hours = useMemo(() => {
+    return Math.floor((time / (1000 * 60 * 60)) % 24)
+      .toString()
+      .padStart(2, "0");
+  }, [time]);
 
-    return `${hours.toString().padStart(2, "0")}:${minutes
+  const minutes = useMemo(() => {
+    return Math.floor((time / (1000 * 60)) % 60)
       .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}.${milliseconds
+      .padStart(2, "0");
+  }, [time]);
+
+  const seconds = useMemo(() => {
+    return Math.floor((time / 1000) % 60)
       .toString()
-      .padStart(2, "0")}`;
-  };
+      .padStart(2, "0");
+  }, [time]);
+
+  const milliseconds = useMemo(() => {
+    return Math.floor((time % 1000) / 10)
+      .toString()
+      .padStart(2, "0");
+  }, [time]);
 
   useEffect(() => {
     let timer;
@@ -61,8 +72,57 @@ const Timer = () => {
       <AppContainer>
         {/* Timer */}
         <div className="py-8 sm:py-16 flex flex-col gap-8 border rounded-md shadow-sm">
-          <div className="text-4xl sm:text-5xl font-bold text-center">
-            {formatTime()}
+          <div className="flex flex-col items-center justify-center w-full h-full gap-8 sm:gap-16">
+            <div className="flex justify-center gap-3 sm:gap-8">
+              <div className="flex flex-col gap-5 relative">
+                <div className="h-14 w-14 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                  <span className="lg:text-7xl sm:text-6xl text-2xl font-semibold text-[#a5b4fc]">
+                    {hours}
+                  </span>
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span className="text-[#8486A9] text-xs sm:text-2xl text-center font-medium">
+                  {hours <= 1 ? "Hour" : "Hours"}
+                </span>
+              </div>
+              <div className="flex flex-col gap-5 relative">
+                <div className="h-14 w-14 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                  <span className="lg:text-7xl sm:text-6xl text-2xl font-semibold text-[#a5b4fc]">
+                    {minutes}
+                  </span>
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span className="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                  {minutes <= 1 ? "Minute" : "Minutes"}
+                </span>
+              </div>
+              <div className="flex flex-col gap-5 relative">
+                <div className="h-14 w-14 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                  <span className="lg:text-7xl sm:text-6xl text-2xl font-semibold text-[#a5b4fc]">
+                    {seconds}
+                  </span>
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span className="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                  {seconds <= 1 ? "Second" : "Seconds"}
+                </span>
+              </div>
+              <div className="flex flex-col gap-5 relative">
+                <div className="h-14 w-14 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 flex justify-between items-center bg-[#343650] rounded-lg">
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 !-left-[6px] rounded-full bg-[#191A24]"></div>
+                  <span className="lg:text-7xl sm:text-6xl text-2xl font-semibold text-[#a5b4fc]">
+                    {milliseconds}
+                  </span>
+                  <div className="relative h-2 w-2 sm:h-3 sm:w-3 -right-[6px] rounded-full bg-[#191A24]"></div>
+                </div>
+                <span className="text-[#8486A9] text-xs sm:text-2xl text-center capitalize">
+                  {milliseconds <= 1 ? "Millisecond" : "Milliseconds"}
+                </span>
+              </div>
+            </div>
           </div>
           <div className="flex justify-center gap-4">
             {!isRunning ? (

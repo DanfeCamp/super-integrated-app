@@ -20,6 +20,7 @@ const SitemapCompiler = () => {
 
   const [text, setText] = useState("https://superintegrateapp.com");
   const [urls, setUrls] = useState(["https://superintegrateapp.com"]);
+  const [clearText, setClearText] = useState("Clear");
 
   const isValidUrl = (urlString) => {
     try {
@@ -38,6 +39,15 @@ const SitemapCompiler = () => {
       const lines = e.target.value.split("\n");
       return lines.filter((line) => line.trim() !== "" && isValidUrl(line));
     });
+  };
+
+  const handleClear = () => {
+    setText("");
+    setUrls([]);
+    setClearText("Cleared!");
+    setTimeout(() => {
+      setClearText("Clear");
+    }, 1000);
   };
 
   const generateSitemapContent = () => {
@@ -68,35 +78,30 @@ const SitemapCompiler = () => {
     <Breadcrumb paths={paths}>
       <AppContainer>
         {/* Sitemap Compiler */}
-        <div>
-          <div className="grid md:grid-cols-2 gap-4">
-            <textarea
-              className="flex min-h-[360px] max-h-[500px] overflow-y-scroll sia-scrollbar sia-scrollbar-light w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-              onChange={handleTextChange}
-              value={text}
-            ></textarea>
-            <SitemapPreview urls={urls} />
-          </div>
-          <div className="mt-4 sm:mt-8 flex justify-end">
-            <div className="flex gap-4 sm:gap-8">
-              <button
-                class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                type="button"
-                onClick={() => {
-                  setText("");
-                  setUrls([]);
-                }}
-              >
-                Clear
-              </button>
-              <button
-                class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                type="button"
-                onClick={downloadSitemap}
-              >
-                Download
-              </button>
-            </div>
+        <div className="grid md:grid-cols-2 gap-4">
+          <textarea
+            className="flex min-h-[360px] max-h-[500px] overflow-y-scroll sia-scrollbar sia-scrollbar-light w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+            onChange={handleTextChange}
+            value={text}
+          ></textarea>
+          <SitemapPreview urls={urls} />
+        </div>
+        <div className="flex justify-end">
+          <div className="flex gap-4 sm:gap-8">
+            <button
+              class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              type="button"
+              onClick={handleClear}
+            >
+              {clearText}
+            </button>
+            <button
+              class="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              type="button"
+              onClick={downloadSitemap}
+            >
+              Download
+            </button>
           </div>
         </div>
 

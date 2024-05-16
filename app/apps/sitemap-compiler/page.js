@@ -118,6 +118,9 @@ const SitemapCompiler = () => {
               Invalid URLs are automatically excluded.
             </li>
             <li className="ml-4">
+              Each line in the textarea represent a single url.
+            </li>
+            <li className="ml-4">
               As users enter URLs into the textarea, they can simultaneously
               view a live preview of the sitemap generated.
             </li>

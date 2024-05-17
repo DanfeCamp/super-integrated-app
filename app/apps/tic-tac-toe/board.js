@@ -33,6 +33,7 @@ const Board = ({ squares, winningLines, onClick }) => {
 
   return (
     <div className="flex flex-col gap-4 p-4 sm:p-8 border rounded-md shadow-sm items-center">
+      <h2 className="text-xl sm:text-2xl font-medium">Tic-Tac-Toe</h2>
       <div className="flex gap-4">
         {renderSquare(
           0,

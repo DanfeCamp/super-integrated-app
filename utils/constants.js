@@ -6,6 +6,7 @@ export const LIST_OF_APPS = [
     link: "/apps/ai-prompts",
     icon: "🤖",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -15,6 +16,7 @@ export const LIST_OF_APPS = [
     link: "/apps/audio-downloader",
     icon: "🎵",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Media"],
   },
   {
@@ -23,6 +25,7 @@ export const LIST_OF_APPS = [
     link: "/apps/book-summary",
     icon: "📚",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "General"],
   },
   {
@@ -31,6 +34,7 @@ export const LIST_OF_APPS = [
     link: "/apps/color-generator",
     icon: "🎨",
     tag: "General",
+    isComplete: true,
     categories: ["General"],
   },
   {
@@ -40,6 +44,7 @@ export const LIST_OF_APPS = [
     link: "/apps/cookie-details",
     icon: "🍪",
     tag: "Latest",
+    isComplete: false,
     categories: ["Security", "Utility"],
   },
   {
@@ -48,6 +53,7 @@ export const LIST_OF_APPS = [
     link: "/apps/countdown",
     icon: "⏳",
     tag: "General",
+    isComplete: true,
     categories: ["Productivity"],
   },
   {
@@ -57,6 +63,7 @@ export const LIST_OF_APPS = [
     link: "/apps/crossword",
     icon: "✍",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -66,6 +73,7 @@ export const LIST_OF_APPS = [
     link: "/apps/currency-converter",
     icon: "💲",
     tag: "Latest",
+    isComplete: false,
     categories: ["Finance", "Utility"],
   },
   {
@@ -75,6 +83,7 @@ export const LIST_OF_APPS = [
     link: "/apps/pdf-converter",
     icon: "📄",
     tag: "Latest",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -83,6 +92,7 @@ export const LIST_OF_APPS = [
     link: "/apps/word-converter",
     icon: "📝",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -92,6 +102,7 @@ export const LIST_OF_APPS = [
     link: "/apps/ping-pong",
     icon: "🏓",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -100,6 +111,7 @@ export const LIST_OF_APPS = [
     link: "/apps/powerpoint-converter",
     icon: "🖥",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -108,6 +120,7 @@ export const LIST_OF_APPS = [
     link: "/apps/mp4-converter",
     icon: "🎥",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Media"],
   },
   {
@@ -116,6 +129,7 @@ export const LIST_OF_APPS = [
     link: "/apps/mp3-converter",
     icon: "🎵",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Media"],
   },
   {
@@ -125,6 +139,7 @@ export const LIST_OF_APPS = [
     link: "/apps/hangman",
     icon: "🪝",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -133,6 +148,7 @@ export const LIST_OF_APPS = [
     link: "/apps/horoscope",
     icon: "🔮",
     tag: "General",
+    isComplete: false,
     categories: ["General"],
   },
   {
@@ -142,6 +158,7 @@ export const LIST_OF_APPS = [
     link: "/apps/image-editor",
     icon: "🖼️",
     tag: "General",
+    isComplete: false,
     categories: ["Media"],
   },
   {
@@ -150,6 +167,7 @@ export const LIST_OF_APPS = [
     link: "/apps/interest-calculator",
     icon: "💰",
     tag: "General",
+    isComplete: true,
     categories: ["Finance", "Utility"],
   },
   {
@@ -159,6 +177,7 @@ export const LIST_OF_APPS = [
     link: "/apps/jokes",
     icon: "🎭",
     tag: "General",
+    isComplete: false,
     categories: ["Entertainment"],
   },
   {
@@ -167,6 +186,7 @@ export const LIST_OF_APPS = [
     link: "/apps/jpg-converter",
     icon: "🖼️",
     tag: "General",
+    isComplete: false,
     categories: ["Media", "Utility"],
   },
   {
@@ -175,6 +195,7 @@ export const LIST_OF_APPS = [
     link: "/apps/webp-converter",
     icon: "🖼️",
     tag: "General",
+    isComplete: false,
     categories: ["Media", "Utility"],
   },
   {
@@ -183,6 +204,7 @@ export const LIST_OF_APPS = [
     link: "/apps/name-generator",
     icon: "📛",
     tag: "General",
+    isComplete: false,
     categories: ["Utility"],
   },
   {
@@ -191,6 +213,7 @@ export const LIST_OF_APPS = [
     link: "/apps/password-generator",
     icon: "🔐",
     tag: "General",
+    isComplete: true,
     categories: ["Security", "Utility"],
   },
   {
@@ -199,6 +222,7 @@ export const LIST_OF_APPS = [
     link: "/apps/pdf-generator",
     icon: "📄",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -207,6 +231,7 @@ export const LIST_OF_APPS = [
     link: "/apps/png-converter",
     icon: "🖼️",
     tag: "General",
+    isComplete: false,
     categories: ["Utility", "Media"],
   },
   {
@@ -216,6 +241,7 @@ export const LIST_OF_APPS = [
     link: "/apps/qr-generator",
     icon: "🏁",
     tag: "Latest",
+    isComplete: true,
     categories: ["Utility"],
   },
   {
@@ -225,6 +251,7 @@ export const LIST_OF_APPS = [
     link: "/apps/quiz-game",
     icon: "🤔",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -234,6 +261,7 @@ export const LIST_OF_APPS = [
       "Discover inspiration through an incredible selection of thought-provoking quotes to inspire, and motivate you.",
     link: "/apps/quotes",
     tag: "General",
+    isComplete: false,
     categories: ["General"],
   },
   {
@@ -243,6 +271,7 @@ export const LIST_OF_APPS = [
     link: "/apps/recipes",
     icon: "🍲",
     tag: "General",
+    isComplete: false,
     categories: ["General"],
   },
   {
@@ -252,6 +281,7 @@ export const LIST_OF_APPS = [
     link: "/apps/sitemap-compiler",
     icon: "🗊",
     tag: "Latest",
+    isComplete: true,
     categories: ["Utility"],
   },
   {
@@ -261,6 +291,7 @@ export const LIST_OF_APPS = [
     link: "/apps/snake",
     icon: "🐍",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -270,6 +301,7 @@ export const LIST_OF_APPS = [
     link: "/apps/sort-lists",
     icon: "🔢",
     tag: "General",
+    isComplete: true,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -279,6 +311,7 @@ export const LIST_OF_APPS = [
     link: "/apps/summary-generator",
     icon: "🗒",
     tag: "Latest",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -288,6 +321,7 @@ export const LIST_OF_APPS = [
     link: "/apps/tic-tac-toe",
     icon: "❌",
     tag: "Game",
+    isComplete: true,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -297,6 +331,7 @@ export const LIST_OF_APPS = [
     link: "/apps/timer",
     icon: "⏱️",
     tag: "General",
+    isComplete: true,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -306,6 +341,7 @@ export const LIST_OF_APPS = [
     link: "/apps/to-do",
     icon: "🎯",
     tag: "Latest",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -315,6 +351,7 @@ export const LIST_OF_APPS = [
     link: "/apps/trivia",
     icon: "🧩",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -324,6 +361,7 @@ export const LIST_OF_APPS = [
     link: "/apps/video-downloader",
     icon: "▶️",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Media"],
   },
   {
@@ -333,6 +371,7 @@ export const LIST_OF_APPS = [
     link: "/apps/video-editor",
     icon: "🎞️",
     tag: "General",
+    isComplete: false,
     categories: ["Productivity", "Media"],
   },
   {
@@ -342,6 +381,7 @@ export const LIST_OF_APPS = [
     link: "/apps/word-scramble",
     icon: "🔠",
     tag: "Game",
+    isComplete: false,
     categories: ["Entertainment", "Games"],
   },
   {
@@ -351,6 +391,7 @@ export const LIST_OF_APPS = [
     link: "/apps/world-clock",
     icon: "🕓",
     tag: "Latest",
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
 ];

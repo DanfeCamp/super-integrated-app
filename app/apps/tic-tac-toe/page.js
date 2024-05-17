@@ -73,6 +73,8 @@ const TicTacToe = () => {
   let status;
   if (winner) {
     status = "Winner: " + winner.winner;
+  } else if (stepNumber == 9) {
+    status = "Draw: X and O";
   } else {
     status = "Next Player: " + (xIsNext ? "X" : "O");
   }
@@ -92,7 +94,7 @@ const TicTacToe = () => {
               <div className="w-full border-b flex justify-between items-center mb-1 pb-2 ">
                 <div className="text-xl font-medium">{status}</div>
                 <button
-                  className="bg-blue-500 text-white py-2 px-4 rounded-md"
+                  className="bg-blue-500 text-white py-2 px-4 rounded-md text-sm"
                   onClick={() => {
                     setHistory([Array(9).fill(null)]);
                     setStepNumber(0);

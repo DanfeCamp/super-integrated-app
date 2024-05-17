@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "SIA",
+  title: "Interest Rate Calculator",
   description: "",
 };
 

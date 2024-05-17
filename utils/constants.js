@@ -153,10 +153,9 @@ export const LIST_OF_APPS = [
     categories: ["Media"],
   },
   {
-    title: "Interest Rate Calculator",
-    description:
-      "Calculate interest rates for loans, savings, and investments.",
-    link: "/apps/interest-rate-calculator",
+    title: "Interest Calculator",
+    description: "Calculate interest for loans, savings, and investments.",
+    link: "/apps/interest-calculator",
     icon: "💰",
     tag: "General",
     categories: ["Finance", "Utility"],

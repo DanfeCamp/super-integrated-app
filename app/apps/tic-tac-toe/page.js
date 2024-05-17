@@ -141,8 +141,9 @@ const TicTacToe = () => {
               there is a winner.
             </li>
             <li className="ml-4">
-              Users can click on the "<code>Go to game start</code>" button to
-              reset the game to the initial state.
+              Users can click on the "<code>Reset</code>" button to reset the
+              game or click on the "<code>Go to game start</code>" to return to
+              the initial state of game.
             </li>
             <li className="ml-4">
               User can navigate to any previous move by clicking the respective

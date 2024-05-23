@@ -59,9 +59,6 @@ const AppSearch = () => {
       "& ::-webkit-scrollbar-thumb": {
         backgroundColor: "var(--nav-color)",
       },
-      "& ::-webkit-scrollbar-track, & ::-webkit-scrollbar-thumb": {
-        borderRadius: "21px",
-      },
     }),
   };
 

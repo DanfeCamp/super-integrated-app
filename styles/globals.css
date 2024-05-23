@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Search */
-.react-select__control {
-  border-radius: 8px !important;
-}
-/* Search End */
-
 /* Scrollbar */
 /* Bar */
 .sia-scrollbar::-webkit-scrollbar {

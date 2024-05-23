@@ -73,6 +73,8 @@ const TicTacToe = () => {
   let status;
   if (winner) {
     status = "Winner: " + winner.winner;
+  } else if (stepNumber == 9) {
+    status = "Draw: X and O";
   } else {
     status = "Next Player: " + (xIsNext ? "X" : "O");
   }
@@ -82,17 +84,17 @@ const TicTacToe = () => {
       <AppContainer>
         {/* Tic-Tac-Toe */}
         <div className="flex flex-col items-center">
-          <div className="grid lg:grid-cols-2 justify-center gap-8 w-full">
+          <div className="grid lg:grid-cols-2 justify-center gap-4 w-full">
             <Board
               squares={current}
               winningLines={winner ? winner.lines : null}
               onClick={(i) => handleClick(i)}
             />
-            <div className="p-4 border rounded-md shadow-sm">
-              <div className="w-full border-b flex justify-between items-center mb-1 pb-2 ">
-                <div className="text-xl font-medium">{status}</div>
+            <div className="flex flex-col gap-4 justify-between p-4 sm:p-8 border rounded-md shadow-sm">
+              <div className="w-full border-b flex justify-between items-center pb-4">
+                <div className="text-xl font-medium">Game Board</div>
                 <button
-                  className="bg-blue-500 text-white py-2 px-4 rounded-md"
+                  className="bg-blue-500 text-white py-2 px-4 rounded-md text-sm"
                   onClick={() => {
                     setHistory([Array(9).fill(null)]);
                     setStepNumber(0);
@@ -102,7 +104,7 @@ const TicTacToe = () => {
                   Reset
                 </button>
               </div>
-              <div className="overflow-y-scroll sia-scrollbar sia-scrollbar-light">
+              <div className="overflow-y-scroll sia-scrollbar sia-scrollbar-light h-full">
                 {history.map((step, move) => {
                   const desc = move
                     ? "Go to move #" + move
@@ -118,6 +120,7 @@ const TicTacToe = () => {
                   );
                 })}
               </div>
+              <div className="text-xl font-medium border-t pt-4">{status}</div>
             </div>
           </div>
         </div>
@@ -141,13 +144,17 @@ const TicTacToe = () => {
               there is a winner.
             </li>
             <li className="ml-4">
-              Users can click on the "<code>Reset</code>" button to reset the
-              game or click on the "<code>Go to game start</code>" to return to
-              the initial state of game.
+              If all the nine squares are marked and there is no winner then
+              there is a draw.
             </li>
             <li className="ml-4">
               User can navigate to any previous move by clicking the respective
               "<code>Go to move #</code>" button.
+            </li>
+            <li className="ml-4">
+              Users can click on the "<code>Reset</code>" button to reset the
+              game or click on the "<code>Go to game start</code>" to return to
+              the initial state of game.
             </li>
           </ul>
         </div>

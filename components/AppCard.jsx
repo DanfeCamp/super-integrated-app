@@ -10,7 +10,7 @@ const AppCard = ({ title, link, description }) => {
   const router = useRouter();
   return (
     <Card
-      className="w-full h-full border"
+      className="w-full h-full border shadow-sm"
       onClick={() => router.push(link)}
       role="button"
     >

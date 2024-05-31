@@ -3,7 +3,7 @@
 /**
  * External dependencies.
  */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 /**
  * Internal dependencies.
@@ -23,7 +23,11 @@ const ColorGenerator = () => {
   const [palette, setPalette] = useState([]);
 
   const generatePalette = () => {
-    setPalette([...palette, color]);
+    setPalette((prev) => {
+      const _palette = [...prev, color];
+      localStorage.setItem("color-generator", JSON.stringify(_palette));
+      return _palette;
+    });
   };
 
   const randomPalette = () => {
@@ -38,6 +42,7 @@ const ColorGenerator = () => {
   const resetPalette = () => {
     setColor(defaultColor);
     setPalette([]);
+    localStorage.setItem("color-generator", JSON.stringify([]));
   };
 
   const handlePalleteClicked = async (e, col) => {
@@ -48,6 +53,14 @@ const ColorGenerator = () => {
       text.innerText = col;
     }, 1000);
   };
+
+  useEffect(() => {
+    const _palette = JSON.parse(localStorage.getItem("color-generator")) ?? [];
+    if (_palette.length) {
+      setColor(_palette[_palette.length - 1]);
+    }
+    setPalette(_palette);
+  }, []);
 
   return (
     <Breadcrumb paths={paths}>

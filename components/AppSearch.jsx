@@ -10,7 +10,7 @@ import Select from "react-select";
 /**
  * Internal dependencies.
  */
-import { LIST_OF_APPS } from "@utils";
+import { LIST_OF_APPS } from "@utils/constants/apps";
 
 const AppSearch = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -58,9 +58,6 @@ const AppSearch = () => {
       },
       "& ::-webkit-scrollbar-thumb": {
         backgroundColor: "var(--nav-color)",
-      },
-      "& ::-webkit-scrollbar-track, & ::-webkit-scrollbar-thumb": {
-        borderRadius: "21px",
       },
     }),
   };

@@ -6,7 +6,7 @@ export const LIST_OF_APPS = [
     link: "/apps/ai-prompts",
     icon: "🤖",
     tag: "General",
-    isComplete: false,
+    isComplete: true,
     categories: ["Productivity", "Utility"],
   },
   {
@@ -27,6 +27,16 @@ export const LIST_OF_APPS = [
     tag: "General",
     isComplete: false,
     categories: ["Productivity", "General"],
+  },
+  {
+    title: "Calculator",
+    description:
+      "Perform quick and accurate mathematical calculations for various needs.",
+    link: "/apps/calculator",
+    icon: "🧮",
+    tag: "General",
+    isComplete: false,
+    categories: ["Utility", "General"],
   },
   {
     title: "Color Generator",
@@ -299,7 +309,7 @@ export const LIST_OF_APPS = [
     description:
       "Quickly sort lists with the Sort Lists tool, facilitating better organization and management.",
     link: "/apps/sort-lists",
-    icon: "🔢",
+    icon: "🔀",
     tag: "General",
     isComplete: true,
     categories: ["Productivity", "Utility"],
@@ -341,8 +351,18 @@ export const LIST_OF_APPS = [
     link: "/apps/to-do",
     icon: "🎯",
     tag: "Latest",
-    isComplete: false,
+    isComplete: true,
     categories: ["Productivity", "Utility"],
+  },
+  {
+    title: "Translator",
+    description:
+      "Translate your text into over 100 plus languages using the translator tool.",
+    link: "/apps/translator",
+    icon: "🔣",
+    tag: "General",
+    isComplete: true,
+    categories: ["Utility"],
   },
   {
     title: "Trivia",

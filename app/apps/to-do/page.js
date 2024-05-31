@@ -96,7 +96,7 @@ const ToDo = () => {
       <AppContainer>
         {/* To-Do */}
         <div className="flex justify-center w-full">
-          <div className="max-w-[600px] w-full border border-gray-300 rounded-md shadow-sm p-4 sm:p-6 flex flex-col gap-4 sm:gap-6">
+          <div className="max-w-xl w-full border border-gray-300 rounded-md shadow-sm p-4 sm:p-6 flex flex-col gap-4 sm:gap-6">
             <div className="flex justify-between">
               <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
                 ToDo

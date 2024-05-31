@@ -3,7 +3,7 @@
  */
 import Breadcrumb from "@components/Breadcrumb";
 import ClickableList from "@components/ClickableList";
-import { LIST_OF_APPS } from "@utils/constants";
+import { LIST_OF_APPS } from "@utils/constants/apps";
 
 const ListOfApps = () => {
   const paths = [{ link: "/apps", title: "Apps" }];
@@ -19,7 +19,12 @@ const ListOfApps = () => {
           return 0;
         }).map((app) => {
           return (
-            <div key={app.title} className="w-full rounded-lg border">
+            <div
+              key={app.title}
+              className={`w-full rounded-lg border ${
+                app.isComplete ? "border-green-600" : "border-red-600"
+              }`}
+            >
               <ClickableList
                 title={app.title}
                 icon={app.icon}

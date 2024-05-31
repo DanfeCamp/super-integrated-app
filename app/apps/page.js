@@ -3,7 +3,7 @@
  */
 import Breadcrumb from "@components/Breadcrumb";
 import ClickableList from "@components/ClickableList";
-import { LIST_OF_APPS } from "@utils/constants/apps";
+import { LIST_OF_APPS } from "@utils/constants";
 
 const ListOfApps = () => {
   const paths = [{ link: "/apps", title: "Apps" }];

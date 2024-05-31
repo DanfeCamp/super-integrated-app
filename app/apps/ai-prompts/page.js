@@ -11,7 +11,7 @@ import React from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 import TextCard from "@components/TextCard";
-import { AI_PROMPTS } from "@utils/constants/ai-prompts";
+import { AI_PROMPTS } from "@utils/constants";
 
 const AIPrompts = () => {
   const paths = [

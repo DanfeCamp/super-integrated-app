@@ -1,4 +1,4 @@
-export const AI_PROMPTS = [
+const AI_PROMPTS = [
   {
     title: "Time Travel Discovery",
     description:
@@ -360,3 +360,5 @@ export const AI_PROMPTS = [
     tag: "Image Prompts",
   },
 ];
+
+export default AI_PROMPTS;

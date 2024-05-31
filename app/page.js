@@ -4,7 +4,7 @@
  * Internal dependencies.
  */
 import AppCard from "@components/AppCard";
-import { LIST_OF_APPS } from "@utils/constants/apps";
+import { LIST_OF_APPS } from "@utils/constants";
 
 export default function Home() {
   const LIST_OF_TAGS = [

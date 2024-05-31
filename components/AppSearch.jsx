@@ -10,7 +10,7 @@ import Select from "react-select";
 /**
  * Internal dependencies.
  */
-import { LIST_OF_APPS } from "@utils/constants/apps";
+import { LIST_OF_APPS } from "@utils/constants";
 
 const AppSearch = () => {
   const [selectedOption, setSelectedOption] = useState("");

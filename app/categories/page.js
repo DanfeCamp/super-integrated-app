@@ -3,7 +3,7 @@
  */
 import Breadcrumb from "@components/Breadcrumb";
 import AppCard from "@components/AppCard";
-import { LIST_OF_APPS } from "@utils/constants/apps";
+import { LIST_OF_APPS } from "@utils/constants";
 
 const Categories = () => {
   const paths = [{ link: "/categories", title: "Categories" }];

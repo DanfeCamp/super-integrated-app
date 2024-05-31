@@ -1,4 +1,4 @@
-export const LANGUAGES = [
+const LANGUAGES = [
   { title: "Afrikaans", value: "af" },
   { title: "Albanian", value: "sq" },
   { title: "Amharic", value: "am" },
@@ -109,3 +109,5 @@ export const LANGUAGES = [
   { title: "Yoruba", value: "yo" },
   { title: "Zulu", value: "zu" },
 ];
+
+export default LANGUAGES;

@@ -1,4 +1,4 @@
-export const LIST_OF_APPS = [
+const LIST_OF_APPS = [
   {
     title: "AI Prompts",
     description:
@@ -415,3 +415,5 @@ export const LIST_OF_APPS = [
     categories: ["Productivity", "Utility"],
   },
 ];
+
+export default LIST_OF_APPS;

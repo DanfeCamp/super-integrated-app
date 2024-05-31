@@ -19,7 +19,12 @@ const ListOfApps = () => {
           return 0;
         }).map((app) => {
           return (
-            <div key={app.title} className="w-full rounded-lg border">
+            <div
+              key={app.title}
+              className={`w-full rounded-lg border ${
+                app.isComplete ? "border-green-600" : "border-red-600"
+              }`}
+            >
               <ClickableList
                 title={app.title}
                 icon={app.icon}

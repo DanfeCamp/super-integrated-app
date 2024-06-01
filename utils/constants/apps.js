@@ -275,16 +275,6 @@ const LIST_OF_APPS = [
     categories: ["General"],
   },
   {
-    title: "Recipes",
-    description:
-      "Access a wide range of delicious recipes for cooking inspiration.",
-    link: "/apps/recipes",
-    icon: "🍲",
-    tag: "General",
-    isComplete: true,
-    categories: ["General"],
-  },
-  {
     title: "Sitemap Compiler",
     description:
       "Simplify website organization with the Sitemap Compiler, making `sitemap.xml` generation effortless.",

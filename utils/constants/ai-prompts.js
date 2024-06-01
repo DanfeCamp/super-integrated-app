@@ -12,6 +12,18 @@ const AI_PROMPTS = [
     tag: "Creative Prompts",
   },
   {
+    title: "Forgotten Deity's Revenge",
+    description:
+      "Craft a mythological tale featuring a forgotten deity who seeks revenge on those who abandoned them.",
+    tag: "Creative Prompts",
+  },
+  {
+    title: "Unexpected Hero",
+    description:
+      "Develop a plot twist where the apparent villain turns out to be an unexpected hero.",
+    tag: "Creative Prompts",
+  },
+  {
     title: "Colonizing Planets",
     description:
       "Imagine a future where humans have colonized other planets and encounter an alien civilization for the first time.",
@@ -24,12 +36,6 @@ const AI_PROMPTS = [
     tag: "Creative Prompts",
   },
   {
-    title: "Forgotten Deity's Revenge",
-    description:
-      "Craft a mythological tale featuring a forgotten deity who seeks revenge on those who abandoned them.",
-    tag: "Creative Prompts",
-  },
-  {
     title: "World of Feared Magic",
     description:
       "Create a world where magic exists but is feared and hunted by those without its power.",
@@ -39,12 +45,6 @@ const AI_PROMPTS = [
     title: "Hidden Message",
     description:
       "Write a suspenseful scene where the protagonist discovers a hidden message that unravels a long-held secret.",
-    tag: "Creative Prompts",
-  },
-  {
-    title: "Unexpected Hero",
-    description:
-      "Develop a plot twist where the apparent villain turns out to be an unexpected hero.",
     tag: "Creative Prompts",
   },
   {
@@ -358,6 +358,125 @@ const AI_PROMPTS = [
     description:
       "Draw ancient ruins being reclaimed by nature, with crumbling structures and overgrown vegetation.",
     tag: "Image Prompts",
+  },
+  {
+    title: "Surpassing Human Intelligence",
+    description:
+      "Describe a society where intelligence has surpassed human intelligence and its implications on society.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Space Exploration",
+    description:
+      "Imagine a scenario where advanced technology is used for space exploration. How does it impact space missions and discoveries?",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Combating Climate Change",
+    description:
+      "Discuss how technology can be utilized to combat climate change and its potential effects on the environment.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Healthcare Revolution",
+    description:
+      "Envision a future where technology plays a significant role in healthcare. How does it change patient care and medical practices?",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Personal Privacy Risks",
+    description:
+      "Examine the potential risks and benefits of technology on personal privacy and data security.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Education Transformation",
+    description:
+      "Explore how technology can revolutionize education and personalized learning experiences.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Job Automation",
+    description: "Discuss the impact of automation on the future of work.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Entertainment Evolution",
+    description:
+      "Imagine how technology could transform the entertainment industry, from movies to video games.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Ethical Dilemmas",
+    description:
+      "Debate the ethical considerations and dilemmas associated with the advancement of technology.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Smart Cities",
+    description:
+      "Describe how technology could be integrated into the development of smart cities and urban planning.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Transportation Changes",
+    description:
+      "Discuss the potential changes in transportation with the integration of advanced technology, such as self-driving cars and smart traffic management.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Finance Innovations",
+    description:
+      "Explore the role of technology in the financial sector, including investment strategies and fraud detection.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Creative Assistance",
+    description:
+      "Imagine a world where technology assists in creative fields such as art, music, and writing. What are the possibilities?",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Retail Transformation",
+    description:
+      "Discuss the potential impact of technology on the retail industry, including personalized shopping experiences and inventory management.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Human Relationships",
+    description:
+      "Examine how technology might affect human relationships, including friendships and romantic partnerships.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Agricultural Advancements",
+    description:
+      "Explore the ways technology could revolutionize agriculture and food production.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Disaster Management",
+    description:
+      "Discuss how technology can be used in disaster management and emergency response.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Cybersecurity Enhancement",
+    description:
+      "Analyze the role of technology in enhancing cybersecurity measures and protecting against cyber threats.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Virtual Reality",
+    description:
+      "Imagine the possibilities of combining technology with virtual reality to create immersive experiences.",
+    tag: "Video Prompts",
+  },
+  {
+    title: "Improving Aging",
+    description:
+      "Discuss how technology could assist in improving the quality of life for the aging population.",
+    tag: "Video Prompts",
   },
 ];
 

@@ -281,7 +281,7 @@ const LIST_OF_APPS = [
     link: "/apps/recipes",
     icon: "🍲",
     tag: "General",
-    isComplete: false,
+    isComplete: true,
     categories: ["General"],
   },
   {

@@ -19,7 +19,7 @@ const TextCard = ({ title, description }) => {
           {description}
         </p>
         <button
-          className="bg-gray-200 rounded-full py-2 text-sm font-semibold text-gray-900 hover:shadow-sm"
+          className="bg-gray-200 rounded-full py-2 text-sm font-medium text-gray-900 hover:shadow-sm"
           title="Copy the prompt"
           onClick={() => {
             navigator.clipboard.writeText(description);

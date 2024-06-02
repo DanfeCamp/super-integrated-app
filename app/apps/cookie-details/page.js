@@ -201,7 +201,7 @@ const CookieDetails = () => {
           </ul>
         </div>
 
-        {/* Usage */}
+        {/* Note */}
         <div className="w-full flex flex-col gap-4 sm:gap-6">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
             Note

@@ -262,7 +262,7 @@ const LIST_OF_APPS = [
       "Discover inspiration through an incredible selection of thought-provoking quotes to inspire, and motivate you.",
     link: "/apps/quotes",
     tag: "General",
-    isComplete: false,
+    isComplete: true,
     categories: ["General"],
   },
   {

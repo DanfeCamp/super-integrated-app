@@ -187,7 +187,7 @@ const LIST_OF_APPS = [
     link: "/apps/jokes",
     icon: "🎭",
     tag: "General",
-    isComplete: false,
+    isComplete: true,
     categories: ["Entertainment"],
   },
   {

@@ -80,9 +80,9 @@ const Quotes = () => {
 
           <div className="min-h-[280px] w-full flex items-center border-t border-b border-gray-300 mt-4 mb-6">
             <div className="w-full text-base sm:text-lg font-medium">
-              <FontAwesomeIcon icon={faQuoteLeft} />
+              <FontAwesomeIcon icon={faQuoteLeft} size="lg" />
               <span className="px-2">{quote?.quote}</span>
-              <FontAwesomeIcon icon={faQuoteRight} />
+              <FontAwesomeIcon icon={faQuoteRight} size="lg" />
               <div className="w-full flex justify-end font-normal text-sm mt-4">
                 - {quote.author !== "" ? quote.author : "Someone"}
               </div>
@@ -148,7 +148,7 @@ const Quotes = () => {
           </h1>
           <ul className="leading-relaxed text-base list-disc">
             <li className="ml-4">
-              The displayed quote data is sourced from{" "}
+              The displayed quotes are sourced from{" "}
               <Link
                 href="https://github.com/nirajgiriXD/garden-of-quotes"
                 traget="_blank"

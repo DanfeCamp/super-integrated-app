@@ -89,6 +89,7 @@ const Quotes = () => {
             </div>
           </div>
 
+          {/* Options */}
           <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 sm:space-x-4 gap-6">
             <Select
               label="Select Tag"

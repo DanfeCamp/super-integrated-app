@@ -45,7 +45,7 @@ const LIST_OF_APPS = [
     icon: "🎨",
     tag: "General",
     isComplete: true,
-    categories: ["General"],
+    categories: ["Utility"],
   },
   {
     title: "Cookie Details",
@@ -74,7 +74,7 @@ const LIST_OF_APPS = [
     icon: "✍",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Currency Converter",
@@ -113,7 +113,7 @@ const LIST_OF_APPS = [
     icon: "🏓",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "PowerPoint Converter",
@@ -150,7 +150,7 @@ const LIST_OF_APPS = [
     icon: "🪝",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Horoscope",
@@ -227,15 +227,6 @@ const LIST_OF_APPS = [
     categories: ["Security", "Utility"],
   },
   {
-    title: "PDF Generator",
-    description: "Quickly generate PDF documents for various purposes.",
-    link: "/apps/pdf-generator",
-    icon: "📄",
-    tag: "General",
-    isComplete: false,
-    categories: ["Productivity", "Utility"],
-  },
-  {
     title: "PNG Converter",
     description: "Convert PNG image files to other formats.",
     link: "/apps/png-converter",
@@ -262,7 +253,7 @@ const LIST_OF_APPS = [
     icon: "🤔",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Quotes",
@@ -292,7 +283,7 @@ const LIST_OF_APPS = [
     icon: "🐍",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Sort Lists",
@@ -322,7 +313,7 @@ const LIST_OF_APPS = [
     icon: "❌",
     tag: "Game",
     isComplete: true,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Timer",
@@ -362,7 +353,7 @@ const LIST_OF_APPS = [
     icon: "🧩",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "Video Downloader",
@@ -392,7 +383,7 @@ const LIST_OF_APPS = [
     icon: "🔠",
     tag: "Game",
     isComplete: false,
-    categories: ["Entertainment", "Games"],
+    categories: ["Entertainment"],
   },
   {
     title: "World Clock",

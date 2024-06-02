@@ -80,9 +80,9 @@ const Quotes = () => {
 
           <div className="min-h-[280px] w-full flex items-center border-t border-b border-gray-300 mt-4 mb-6">
             <div className="w-full text-base sm:text-lg font-medium">
-              <FontAwesomeIcon icon={faQuoteLeft} fontSize={16} />
+              <FontAwesomeIcon icon={faQuoteLeft} size="lg" />
               <span className="px-2">{quote?.quote}</span>
-              <FontAwesomeIcon icon={faQuoteRight} fontSize={16} />
+              <FontAwesomeIcon icon={faQuoteRight} size="lg" />
               <div className="w-full flex justify-end font-normal text-sm mt-4">
                 - {quote.author !== "" ? quote.author : "Someone"}
               </div>

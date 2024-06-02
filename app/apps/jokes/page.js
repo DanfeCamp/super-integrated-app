@@ -24,9 +24,9 @@ const Jokes = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedTag, setSelectedTag] = useState("any");
   const [joke, setJoke] = useState({
-    type: "",
-    setup: "",
-    punchline: "",
+    type: "...",
+    setup: "...",
+    punchline: "...",
     id: 0,
   });
 
@@ -59,7 +59,12 @@ const Jokes = () => {
       <AppContainer>
         {/* Joke */}
         <div className="w-full sm:w-[450px] mx-auto p-4 sm:p-8 border shadow-sm rounded-md">
-          <div className="min-h-[200px] w-full flex items-center">
+          <h2 className="">
+            <span className="font-medium">Tags: </span>
+            {joke.type}
+          </h2>
+
+          <div className="min-h-[220px] w-full flex items-center border-t border-b border-gray-300 mt-4 mb-6">
             <div className="w-full text-base flex flex-col gap-4">
               <p>
                 <span className="font-medium">Setup: </span>
@@ -73,7 +78,7 @@ const Jokes = () => {
           </div>
 
           {/* Options */}
-          <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 sm:space-x-4 gap-6 border-t pt-6">
+          <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 sm:space-x-4 gap-6">
             <Select
               label="Select Tag"
               className="hover:shadow-md"

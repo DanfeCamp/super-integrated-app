@@ -11,8 +11,6 @@ export const POST = async (req, res) => {
     _tag === "any" ? "" : `${_tag}/`
   }random`;
 
-  console.log(url);
-
   try {
     // Fetch the JSON file from the provided URL
     const response = await fetch(url);

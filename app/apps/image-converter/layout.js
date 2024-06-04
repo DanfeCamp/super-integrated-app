@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "PNG Converter",
+  title: "Image Converter",
   description: "",
 };
 

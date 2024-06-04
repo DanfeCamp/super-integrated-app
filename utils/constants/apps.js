@@ -134,9 +134,10 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Media"],
   },
   {
-    title: "MP3 Converter",
-    description: "Convert MP3 files to other audio formats.",
-    link: "/apps/mp3-converter",
+    title: "Audio Converter",
+    description:
+      "Convert audio files to other audio formats like MP3, WAV, etc.",
+    link: "/apps/audio-converter",
     icon: "🎵",
     tag: "General",
     isComplete: false,
@@ -191,24 +192,6 @@ const LIST_OF_APPS = [
     categories: ["Entertainment"],
   },
   {
-    title: "JPG Converter",
-    description: "Convert JPG image files to other formats.",
-    link: "/apps/jpg-converter",
-    icon: "🖼️",
-    tag: "General",
-    isComplete: false,
-    categories: ["Media", "Utility"],
-  },
-  {
-    title: "Webp Converter",
-    description: "Convert webp image files to other formats.",
-    link: "/apps/webp-converter",
-    icon: "🖼️",
-    tag: "General",
-    isComplete: false,
-    categories: ["Media", "Utility"],
-  },
-  {
     title: "Name Generator",
     description: "Generate random names for characters, products, and more.",
     link: "/apps/name-generator",
@@ -227,12 +210,13 @@ const LIST_OF_APPS = [
     categories: ["Security", "Utility"],
   },
   {
-    title: "PNG Converter",
-    description: "Convert PNG image files to other formats.",
-    link: "/apps/png-converter",
+    title: "Image Converter",
+    description:
+      "Convert image files to other image formats such as JPG, PNG, WEBP, etc.",
+    link: "/apps/image-converter",
     icon: "🖼️",
     tag: "General",
-    isComplete: false,
+    isComplete: true,
     categories: ["Utility", "Media"],
   },
   {

@@ -16,19 +16,20 @@ import AppContainer from "@components/AppContainer";
 const Jokes = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/jokes", title: "Jokes" },
+    { link: "/apps/jokes", title: "Jokes" },
   ];
 
   const tags = ["Any", "Programming", "Knock-Knock"];
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedTag, setSelectedTag] = useState("any");
-  const [joke, setJoke] = useState({
+  const initialJoke = {
     type: "...",
     setup: "...",
     punchline: "...",
     id: 0,
-  });
+  };
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedTag, setSelectedTag] = useState("any");
+  const [joke, setJoke] = useState(initialJoke);
 
   const getJoke = async () => {
     setIsLoading(true);
@@ -45,6 +46,8 @@ const Jokes = () => {
 
     if (response.ok) {
       setJoke(data.joke);
+    } else {
+      setJoke(initialJoke);
     }
 
     setIsLoading(false);

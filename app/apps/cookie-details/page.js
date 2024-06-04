@@ -12,10 +12,10 @@ import Link from "next/link";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const CookieDetails = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/cookie-details", title: "Cookie Details" },
+    { link: "/apps/cookie-details", title: "Cookie Details" },
   ];
 
   const initialForm = {
@@ -130,49 +130,54 @@ const CookieDetails = () => {
         </form>
 
         {/* Search Result */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {cookieDetails.length > 0 &&
-            cookieDetails.map((cookie, index) => {
-              return (
-                <div className="border shadow-sm p-4 rounded-md" key={index}>
-                  <h4 className="text-base font-medium">
-                    {`${cookie["Cookie / Data Key name"]} (${cookie["Domain"]})`}
-                  </h4>
-                  <hr className="my-2" />
-                  <div className="flex flex-col gap-1 text-sm leading-tight">
-                    <p>
-                      <span className="font-semibold">Cookie Name: </span>
-                      {cookie["Cookie / Data Key name"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Cookie Domain: </span>
-                      {cookie["Domain"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Category: </span>
-                      {cookie["Category"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Data Controller: </span>
-                      {cookie["Data Controller"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Retention Period: </span>
-                      {cookie["Retention period"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Platform: </span>
-                      {cookie["Platform"]}
-                    </p>
-                    <p>
-                      <span className="font-semibold">Description: </span>
-                      {cookie["Description"]}
-                    </p>
+        {cookieDetails.length > 0 && (
+          <div className="p-4 border rounded-md shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {cookieDetails.map((cookie, index) => {
+                return (
+                  <div className="border p-4 rounded-md" key={index}>
+                    <h4 className="text-base font-medium">
+                      {`${cookie["Cookie / Data Key name"]} (${cookie["Domain"]})`}
+                    </h4>
+                    <hr className="my-2" />
+                    <div className="flex flex-col gap-1 text-sm leading-tight">
+                      <p>
+                        <span className="font-semibold">Cookie Name: </span>
+                        {cookie["Cookie / Data Key name"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Cookie Domain: </span>
+                        {cookie["Domain"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Category: </span>
+                        {cookie["Category"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Data Controller: </span>
+                        {cookie["Data Controller"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">
+                          Retention Period:{" "}
+                        </span>
+                        {cookie["Retention period"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Platform: </span>
+                        {cookie["Platform"]}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Description: </span>
+                        {cookie["Description"]}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-        </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Usage */}
         <div className="w-full flex flex-col gap-4 sm:gap-6">
@@ -225,4 +230,4 @@ const CookieDetails = () => {
   );
 };
 
-export default CookieDetails;
+export default Home;

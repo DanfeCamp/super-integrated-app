@@ -11,10 +11,10 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const ColorGenerator = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/color-generator", title: "Color Generator" },
+    { link: "/apps/color-generator", title: "Color Generator" },
   ];
 
   const defaultColor = "#25b596";
@@ -173,4 +173,4 @@ const ColorGenerator = () => {
   );
 };
 
-export default ColorGenerator;
+export default Home;

@@ -14,10 +14,10 @@ import FilterBar from "@components/FilterBar";
 import TextCard from "@components/TextCard";
 import { AI_PROMPTS } from "@utils/constants";
 
-const AIPrompts = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/ai-prompts", title: "AI Prompts" },
+    { link: "/apps/ai-prompts", title: "AI Prompts" },
   ];
 
   const AI_PROMPTS_TAGS = AI_PROMPTS.reduce((acc, current) => {
@@ -94,4 +94,4 @@ const AIPrompts = () => {
   );
 };
 
-export default AIPrompts;
+export default Home;

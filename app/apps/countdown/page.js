@@ -13,10 +13,10 @@ import "react-toastify/dist/ReactToastify.css";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const Countdown = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/countdown", title: "Countdown" },
+    { link: "/apps/countdown", title: "Countdown" },
   ];
 
   const notify = () =>
@@ -251,4 +251,4 @@ const Countdown = () => {
   );
 };
 
-export default Countdown;
+export default Home;

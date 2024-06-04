@@ -15,10 +15,10 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const Quotes = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/quotes", title: "Quotes" },
+    { link: "/apps/quotes", title: "Quotes" },
   ];
 
   const tags = [
@@ -165,4 +165,4 @@ const Quotes = () => {
   );
 };
 
-export default Quotes;
+export default Home;

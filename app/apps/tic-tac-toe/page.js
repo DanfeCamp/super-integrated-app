@@ -37,10 +37,10 @@ const calculateWinner = (squares) => {
   return null;
 };
 
-const TicTacToe = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/tic-tac-toe", title: "Tic-Tac-Toe" },
+    { link: "/apps/tic-tac-toe", title: "Tic-Tac-Toe" },
   ];
 
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -163,4 +163,4 @@ const TicTacToe = () => {
   );
 };
 
-export default TicTacToe;
+export default Home;

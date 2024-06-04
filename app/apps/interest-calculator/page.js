@@ -11,10 +11,10 @@ import React, { useState } from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const InterestRateCalculator = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/interest-calculator", title: "Interest Calculator" },
+    { link: "/apps/interest-calculator", title: "Interest Calculator" },
   ];
 
   const [principal, setPrincipal] = useState("");
@@ -128,4 +128,4 @@ const InterestRateCalculator = () => {
   );
 };
 
-export default InterestRateCalculator;
+export default Home;

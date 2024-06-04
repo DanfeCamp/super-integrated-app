@@ -15,7 +15,7 @@ import {
  */
 import Breadcrumb from "@components/Breadcrumb";
 
-const ContactUs = () => {
+const Home = () => {
   const paths = [{ link: "/contact-us", title: "Contact Us" }];
 
   return (
@@ -113,4 +113,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Home;

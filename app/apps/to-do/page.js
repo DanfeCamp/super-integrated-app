@@ -19,10 +19,10 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 import { uuid } from "@utils";
 
-const ToDo = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/to-do", title: "To-Do" },
+    { link: "/apps/to-do", title: "To-Do" },
   ];
 
   const [todo, setTodo] = useState("");
@@ -239,4 +239,4 @@ const ToDo = () => {
   );
 };
 
-export default ToDo;
+export default Home;

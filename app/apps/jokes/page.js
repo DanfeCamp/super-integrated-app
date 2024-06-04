@@ -13,7 +13,7 @@ import { Select, Option } from "@material-tailwind/react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const Jokes = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
     { link: "/apps/jokes", title: "Jokes" },
@@ -151,4 +151,4 @@ const Jokes = () => {
   );
 };
 
-export default Jokes;
+export default Home;

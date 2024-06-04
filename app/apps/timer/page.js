@@ -11,10 +11,10 @@ import React, { useState, useEffect, useMemo } from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const Timer = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/timer", title: "Timer" },
+    { link: "/apps/timer", title: "Timer" },
   ];
 
   const [time, setTime] = useState(0);
@@ -183,4 +183,4 @@ const Timer = () => {
   );
 };
 
-export default Timer;
+export default Home;

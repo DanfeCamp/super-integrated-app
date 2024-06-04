@@ -12,10 +12,10 @@ import AppContainer from "@components/AppContainer";
 import Breadcrumb from "@components/Breadcrumb";
 import Checkbox from "@components/Checkbox";
 
-const PasswordGenerator = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/password-generator", title: "Password Generator" },
+    { link: "/apps/password-generator", title: "Password Generator" },
   ];
   const minimumNumberOfCharacter = 4;
   const maximumNumberOfCharacter = 32;
@@ -286,4 +286,4 @@ const PasswordGenerator = () => {
   );
 };
 
-export default PasswordGenerator;
+export default Home;

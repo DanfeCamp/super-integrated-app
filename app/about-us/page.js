@@ -4,7 +4,7 @@
 import Breadcrumb from "@components/Breadcrumb";
 import FAQAccordion from "@components/AboutUsFAQAccordion";
 
-const AboutUs = () => {
+const Home = () => {
   const paths = [{ link: "/about-us", title: "About Us" }];
 
   return (
@@ -64,4 +64,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Home;

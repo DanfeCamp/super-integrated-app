@@ -5,7 +5,7 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppCard from "@components/AppCard";
 import { LIST_OF_APPS } from "@utils/constants";
 
-const Categories = () => {
+const Home = () => {
   const paths = [{ link: "/categories", title: "Categories" }];
 
   const LIST_OF_CATEGORIES = [
@@ -47,4 +47,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Home;

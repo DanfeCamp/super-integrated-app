@@ -12,7 +12,7 @@ import { Select, Option } from "@material-tailwind/react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const PNGConverter = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
     { link: "/apps/image-converter", title: "Image Converter" },
@@ -243,4 +243,4 @@ const PNGConverter = () => {
   );
 };
 
-export default PNGConverter;
+export default Home;

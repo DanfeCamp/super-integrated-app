@@ -13,10 +13,10 @@ import * as htmlToImage from "html-to-image";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const page = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/qr-generator", title: "QR Generator" },
+    { link: "/apps/qr-generator", title: "QR Generator" },
   ];
 
   const [text, setText] = useState("");
@@ -108,4 +108,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

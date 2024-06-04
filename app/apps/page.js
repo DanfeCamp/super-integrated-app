@@ -5,7 +5,7 @@ import Breadcrumb from "@components/Breadcrumb";
 import ClickableList from "@components/ClickableList";
 import { LIST_OF_APPS } from "@utils/constants";
 
-const ListOfApps = () => {
+const Home = () => {
   const paths = [{ link: "/apps", title: "Apps" }];
 
   return (
@@ -39,4 +39,4 @@ const ListOfApps = () => {
   );
 };
 
-export default ListOfApps;
+export default Home;

@@ -11,10 +11,10 @@ import React, { useState } from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const BookSummary = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/book-summary", title: "Book Summary" },
+    { link: "/apps/book-summary", title: "Book Summary" },
   ];
 
   return (
@@ -42,4 +42,4 @@ const BookSummary = () => {
   );
 };
 
-export default BookSummary;
+export default Home;

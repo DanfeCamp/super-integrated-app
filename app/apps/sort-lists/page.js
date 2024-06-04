@@ -11,10 +11,10 @@ import React, { useState } from "react";
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
-const SortLists = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/sort-lists", title: "Sort Lists" },
+    { link: "/apps/sort-lists", title: "Sort Lists" },
   ];
   const [text, setText] = useState("");
   const [sortedText, setSortedText] = useState("");
@@ -74,7 +74,7 @@ const SortLists = () => {
 
           {/* Buttons */}
           <div className="flex justify-end mt-4">
-            <div className="flex gap-4 sm:gap-8">
+            <div className="flex gap-4">
               <button
                 className="align-middle select-none font-sans font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                 type="button"
@@ -129,4 +129,4 @@ const SortLists = () => {
   );
 };
 
-export default SortLists;
+export default Home;

@@ -15,10 +15,10 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 import { LANGUAGES } from "@utils/constants";
 
-const Translate = () => {
+const Home = () => {
   const paths = [
     { link: "/apps", title: "Apps" },
-    { link: "/translator", title: "Translator" },
+    { link: "/apps/translator", title: "Translator" },
   ];
 
   const options = LANGUAGES.map((option) => {
@@ -209,4 +209,4 @@ const Translate = () => {
   );
 };
 
-export default Translate;
+export default Home;

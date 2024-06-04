@@ -210,9 +210,19 @@ const LIST_OF_APPS = [
     categories: ["Security", "Utility"],
   },
   {
+    title: "Image Compressor",
+    description:
+      "Compress image files (JPG, PNG, WEBP, AVIF, etc.) to smaller size.",
+    link: "/apps/image-compressor",
+    icon: "🖼️",
+    tag: "General",
+    isComplete: true,
+    categories: ["Utility", "Media"],
+  },
+  {
     title: "Image Converter",
     description:
-      "Convert image files to other image formats such as JPG, PNG, WEBP, etc.",
+      "Convert image files to other image formats such as JPG, PNG, WEBP, AVIF etc.",
     link: "/apps/image-converter",
     icon: "🖼️",
     tag: "General",

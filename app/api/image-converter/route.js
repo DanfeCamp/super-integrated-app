@@ -9,8 +9,16 @@ export const POST = async (req, res) => {
   const file = formData.get("file");
   const format = formData.get("format");
 
+  const formats = ["PNG", "JPG", "JPEG", "WEBP", "AVIF"];
+
   if (!file) {
     return new Response(JSON.stringify({ error: "No files received." }), {
+      status: 400,
+    });
+  }
+
+  if (!formats.includes(format?.toUpperCase())) {
+    return new Response(JSON.stringify({ error: "No format selected." }), {
       status: 400,
     });
   }
@@ -18,6 +26,12 @@ export const POST = async (req, res) => {
   const buffer = Buffer.from(await file.arrayBuffer());
   const originalFilename = file.name.replaceAll(" ", "_");
   const newFilename = originalFilename.replace(/\.\w+$/, `.${format}`);
+
+  if (Buffer.byteLength(buffer) >= 104857600) {
+    return new Response(JSON.stringify({ error: "File size exceed limit." }), {
+      status: 400,
+    });
+  }
 
   try {
     let sharpInstance = sharp(buffer);

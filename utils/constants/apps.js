@@ -20,15 +20,6 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Media"],
   },
   {
-    title: "Book Summary",
-    description: "Read summarize books to get key insights and save time.",
-    link: "/apps/book-summary",
-    icon: "📚",
-    tag: "General",
-    isComplete: false,
-    categories: ["Productivity", "General"],
-  },
-  {
     title: "Calculator",
     description:
       "Perform quick and accurate mathematical calculations for various needs.",
@@ -105,9 +96,10 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Utility"],
   },
   {
-    title: "MP4 Converter",
-    description: "Convert MP4 files to other video formats.",
-    link: "/apps/mp4-converter",
+    title: "Video Converter",
+    description:
+      "Convert Video files to other formats like MP4, MOV, AVI, etc.",
+    link: "/apps/video-converter",
     icon: "🎥",
     tag: "General",
     isComplete: false,

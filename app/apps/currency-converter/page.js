@@ -279,15 +279,16 @@ const Home = () => {
           </h1>
           <ul className="leading-relaxed text-base list-disc">
             <li className="ml-4">
-              The joke consists of a setup and a punchline.
+              Users can enter the amount they want to convert in the "
+              <code>Amount</code>" field.
             </li>
             <li className="ml-4">
-              Users can click on the "<code>New Joke</code>" button to get a new
-              joke.
+              Users can choose the currency for the entered amount from the "
+              <code>Currency</code>" dropdown.
             </li>
             <li className="ml-4">
-              Users can choose <code>tag</code> to get the jokes of selected
-              tag.
+              The converted amount will be calculated and updated "
+              <code>Amount</code>" field.
             </li>
           </ul>
         </div>

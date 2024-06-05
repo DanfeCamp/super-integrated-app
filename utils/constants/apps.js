@@ -20,15 +20,6 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Media"],
   },
   {
-    title: "Book Summary",
-    description: "Read summarize books to get key insights and save time.",
-    link: "/apps/book-summary",
-    icon: "📚",
-    tag: "General",
-    isComplete: false,
-    categories: ["Productivity", "General"],
-  },
-  {
     title: "Calculator",
     description:
       "Perform quick and accurate mathematical calculations for various needs.",
@@ -67,23 +58,13 @@ const LIST_OF_APPS = [
     categories: ["Productivity"],
   },
   {
-    title: "Crossword",
-    description:
-      "Challenge yourself with the interactive Crossword puzzle, perfect for word enthusiasts.",
-    link: "/apps/crossword",
-    icon: "✍",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
-  },
-  {
     title: "Currency Converter",
     description:
       "Enable seamless currency conversion with the Currency Converter, offering up-to-date exchange rates.",
     link: "/apps/currency-converter",
     icon: "💲",
     tag: "Latest",
-    isComplete: false,
+    isComplete: true,
     categories: ["Finance", "Utility"],
   },
   {
@@ -106,16 +87,6 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Utility"],
   },
   {
-    title: "Ping Pong",
-    description:
-      "Compete in a fast-paced game of Ping Pong, perfect for some quick entertainment.",
-    link: "/apps/ping-pong",
-    icon: "🏓",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
-  },
-  {
     title: "PowerPoint Converter",
     description: "Convert PowerPoint presentations to different formats.",
     link: "/apps/powerpoint-converter",
@@ -125,9 +96,10 @@ const LIST_OF_APPS = [
     categories: ["Productivity", "Utility"],
   },
   {
-    title: "MP4 Converter",
-    description: "Convert MP4 files to other video formats.",
-    link: "/apps/mp4-converter",
+    title: "Video Converter",
+    description:
+      "Convert Video files to other formats like MP4, MOV, AVI, etc.",
+    link: "/apps/video-converter",
     icon: "🎥",
     tag: "General",
     isComplete: false,
@@ -142,16 +114,6 @@ const LIST_OF_APPS = [
     tag: "General",
     isComplete: false,
     categories: ["Productivity", "Media"],
-  },
-  {
-    title: "Hangman",
-    description:
-      "Guess the word and test your vocabulary skills with the Hangman game, fun for players of all ages.",
-    link: "/apps/hangman",
-    icon: "🪝",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
   },
   {
     title: "Horoscope",
@@ -240,16 +202,6 @@ const LIST_OF_APPS = [
     categories: ["Utility"],
   },
   {
-    title: "Quiz Game",
-    description:
-      "Test your knowledge with the Quiz App, featuring fun and challenging questions on various topics.",
-    link: "/apps/quiz-game",
-    icon: "🤔",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
-  },
-  {
     title: "Quotes",
     icon: "💭",
     description:
@@ -268,16 +220,6 @@ const LIST_OF_APPS = [
     tag: "Latest",
     isComplete: true,
     categories: ["Utility"],
-  },
-  {
-    title: "Snake",
-    description:
-      "Navigate the snake and gobble up food to grow longer in the Snake game, a timeless classic for all ages.",
-    link: "/apps/snake",
-    icon: "🐍",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
   },
   {
     title: "Sort Lists",
@@ -305,7 +247,7 @@ const LIST_OF_APPS = [
       "Enjoy classic fun and challenge your friends with the Tic-Tac-Toe game, perfect for passing the time.",
     link: "/apps/tic-tac-toe",
     icon: "❌",
-    tag: "Game",
+    tag: "General",
     isComplete: true,
     categories: ["Entertainment"],
   },
@@ -340,16 +282,6 @@ const LIST_OF_APPS = [
     categories: ["Utility"],
   },
   {
-    title: "Trivia",
-    description:
-      "Test your knowledge and have fun with the Trivia game, offering questions on a variety of topics.",
-    link: "/apps/trivia",
-    icon: "🧩",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
-  },
-  {
     title: "Video Downloader",
     description:
       "Effortlessly download videos with the Video Downloader, enabling offline viewing of your favorite content.",
@@ -368,16 +300,6 @@ const LIST_OF_APPS = [
     tag: "General",
     isComplete: false,
     categories: ["Productivity", "Media"],
-  },
-  {
-    title: "Word Scramble",
-    description:
-      "Challenge your vocabulary and unscramble words to test your skills with the Word Scramble game.",
-    link: "/apps/word-scramble",
-    icon: "🔠",
-    tag: "Game",
-    isComplete: false,
-    categories: ["Entertainment"],
   },
   {
     title: "World Clock",

@@ -16,10 +16,8 @@ import {
 import Breadcrumb from "@components/Breadcrumb";
 
 const Home = () => {
-  const paths = [{ link: "/contact-us", title: "Contact Us" }];
-
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <section className="py-1">
         <div className="relative h-[300px] rounded overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('/img/contact-us-bg.jpg')]"></div>
         <div className="container px-6 md:px-12">

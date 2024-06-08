@@ -16,11 +16,6 @@ import AppContainer from "@components/AppContainer";
 import { LANGUAGES } from "@utils/constants";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/translator", title: "Translator" },
-  ];
-
   const options = LANGUAGES.map((option) => {
     return {
       value: option.value,
@@ -102,7 +97,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Translator */}
         <div className="flex items-center justify-center">

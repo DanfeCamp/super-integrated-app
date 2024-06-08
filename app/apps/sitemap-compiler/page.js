@@ -13,11 +13,6 @@ import AppContainer from "@components/AppContainer";
 import SitemapPreview from "./sitemapPreview";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/sitemap-compiler", title: "Sitemap Compiler" },
-  ];
-
   const [text, setText] = useState("https://superintegrateapp.com");
   const [urls, setUrls] = useState(["https://superintegrateapp.com"]);
   const [clearText, setClearText] = useState("Clear");
@@ -75,7 +70,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Sitemap Compiler */}
         <div>

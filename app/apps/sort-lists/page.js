@@ -12,10 +12,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/sort-lists", title: "Sort Lists" },
-  ];
   const [text, setText] = useState("");
   const [sortedText, setSortedText] = useState("");
   const [copyText, setCopyText] = useState("Copy");
@@ -53,7 +49,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Sort Lists */}
         <div>

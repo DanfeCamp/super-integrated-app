@@ -38,11 +38,6 @@ const calculateWinner = (squares) => {
 };
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/tic-tac-toe", title: "Tic-Tac-Toe" },
-  ];
-
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [stepNumber, setStepNumber] = useState(0);
   const [xIsNext, setXIsNext] = useState(true);
@@ -80,7 +75,7 @@ const Home = () => {
   }
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Tic-Tac-Toe */}
         <div className="flex flex-col items-center">

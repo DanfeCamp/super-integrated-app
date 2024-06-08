@@ -14,11 +14,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/qr-generator", title: "QR Generator" },
-  ];
-
   const [text, setText] = useState("");
   const qrCodeRef = useRef(null);
 
@@ -38,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Sort Lists */}
         <div>

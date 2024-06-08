@@ -5,10 +5,8 @@ import Breadcrumb from "@components/Breadcrumb";
 import FAQAccordion from "@components/AboutUsFAQAccordion";
 
 const Home = () => {
-  const paths = [{ link: "/about-us", title: "About Us" }];
-
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <div className="flex flex-col gap-4 sm:gap-8">
         {/* SIA */}
         <div className="w-full flex flex-col gap-4 sm:gap-6">

@@ -16,11 +16,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/quotes", title: "Quotes" },
-  ];
-
   const tags = [
     "Any",
     "Finance",
@@ -69,7 +64,7 @@ const Home = () => {
   }, [selectedTag]);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Quote */}
         <div className="w-full sm:w-[450px] mx-auto p-4 sm:p-8 border shadow-sm rounded-md">

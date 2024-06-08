@@ -6,8 +6,6 @@ import AppCard from "@components/AppCard";
 import { LIST_OF_APPS } from "@utils/constants";
 
 const Home = () => {
-  const paths = [{ link: "/categories", title: "Categories" }];
-
   const LIST_OF_CATEGORIES = [
     ...new Set(
       LIST_OF_APPS.reduce((initial, app) => [...initial, ...app.categories], [])
@@ -15,7 +13,7 @@ const Home = () => {
   ].sort();
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <div className="flex flex-col gap-8 sm:gap-12">
         {LIST_OF_CATEGORIES.map((category) => {
           return (

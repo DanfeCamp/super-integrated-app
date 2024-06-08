@@ -5,8 +5,43 @@
  */
 import Link from "next/link";
 import { Breadcrumbs } from "@material-tailwind/react";
+import { useEffect, useState } from "react";
 
-const Breadcrumb = ({ paths, children }) => {
+const Breadcrumb = ({ children }) => {
+  const [paths, setPaths] = useState([]);
+
+  useEffect(() => {
+    const url = window.location.href;
+    const path = new URL(url).pathname;
+    const parts = path.split("/").filter((part) => part !== "");
+
+    // Generate the slug array
+    const slugs = [];
+    for (let i = 0; i < parts.length; i++) {
+      let slug = "/" + parts.slice(0, i + 1).join("/");
+      slugs.push(slug);
+    }
+
+    const _paths = slugs.map((slug) => {
+      const parts = slug.split("/");
+      const lastPart = parts[parts.length - 1];
+
+      const formatted = lastPart
+        .split("-")
+        .map((word) => {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(" ");
+
+      return {
+        link: slug,
+        title: formatted,
+      };
+    });
+
+    setPaths(_paths);
+  }, []);
+
   return (
     <div className="flex flex-col gap-4 sm:gap-8">
       <Breadcrumbs>

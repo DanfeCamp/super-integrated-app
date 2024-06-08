@@ -15,11 +15,6 @@ import AppContainer from "@components/AppContainer";
 import { CURRENCY } from "@utils";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/currency-converter", title: "Currency Converter" },
-  ];
-
   const [updatedTime, setUpdatedTime] = useState("");
   const [rates, setRates] = useState({});
   const [form, setForm] = useState({
@@ -177,7 +172,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Currency Converter */}
         <div className="flex items-center justify-center">

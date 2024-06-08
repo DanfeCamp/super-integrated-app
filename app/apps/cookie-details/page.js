@@ -13,11 +13,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/cookie-details", title: "Cookie Details" },
-  ];
-
   const initialForm = {
     cookieName: "",
     cookieDomain: "",
@@ -55,7 +50,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Search */}
         <form className="w-full flex flex-col gap-4 rounded-md p-4 border shadow-sm">

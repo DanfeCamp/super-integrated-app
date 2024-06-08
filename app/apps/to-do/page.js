@@ -20,11 +20,6 @@ import AppContainer from "@components/AppContainer";
 import { uuid } from "@utils";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/to-do", title: "To-Do" },
-  ];
-
   const [todo, setTodo] = useState("");
   const [editId, setEditId] = useState("");
   const [todos, setTodos] = useState([]);
@@ -92,7 +87,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* To-Do */}
         <div className="flex justify-center w-full">

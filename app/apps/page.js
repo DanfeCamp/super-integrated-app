@@ -6,10 +6,8 @@ import ClickableList from "@components/ClickableList";
 import { LIST_OF_APPS } from "@utils/constants";
 
 const Home = () => {
-  const paths = [{ link: "/apps", title: "Apps" }];
-
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 justify-center items-center">
         {LIST_OF_APPS.sort((a, b) => {
           const titleA = a.title.toLowerCase();

@@ -12,11 +12,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/timer", title: "Timer" },
-  ];
-
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -68,7 +63,7 @@ const Home = () => {
   }, [isRunning]);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Timer */}
         <div className="py-8 sm:py-16 flex flex-col gap-8 border rounded-md shadow-sm">

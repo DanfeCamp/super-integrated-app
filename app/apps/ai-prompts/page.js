@@ -15,11 +15,6 @@ import TextCard from "@components/TextCard";
 import { AI_PROMPTS } from "@utils/constants";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/ai-prompts", title: "AI Prompts" },
-  ];
-
   const AI_PROMPTS_TAGS = AI_PROMPTS.reduce((acc, current) => {
     if (!acc.some((item) => item.tag === current.tag)) {
       acc.push(current);
@@ -34,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Fitler Bar */}
         <div className="border rounded-lg p-2 sm:p-4">

@@ -12,11 +12,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/calculator", title: "Calculator" },
-  ];
-
   const [error, setError] = useState("");
   const [result, setResult] = useState("0");
   const [formattedResult, setFormattedResult] = useState("0");
@@ -99,7 +94,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Calculator */}
         <div className="mx-auto max-w-md border rounded-md shadow-sm w-full flex flex-col gap-4 p-4 text-black">

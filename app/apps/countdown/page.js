@@ -14,11 +14,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/countdown", title: "Countdown" },
-  ];
-
   const notify = () =>
     toast.success("Time's up! Your countdown has finished.", {
       position: "top-center",
@@ -121,7 +116,7 @@ const Home = () => {
   }, [countDownTime, startCountDown, timerRunning]);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         <div className="w-full flex flex-col gap-4 sm:gap-8 border rounded-md shadow-sm py-8 sm:py-16">
           {/* Countdown */}

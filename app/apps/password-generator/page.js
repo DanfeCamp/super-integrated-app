@@ -13,10 +13,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import Checkbox from "@components/Checkbox";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/password-generator", title: "Password Generator" },
-  ];
   const minimumNumberOfCharacter = 4;
   const maximumNumberOfCharacter = 32;
 
@@ -116,7 +112,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Customize Password */}
         <div className="grid md:grid-cols-2 gap-4">

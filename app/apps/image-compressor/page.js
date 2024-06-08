@@ -12,11 +12,6 @@ import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
 
 const Home = () => {
-  const paths = [
-    { link: "/apps", title: "Apps" },
-    { link: "/apps/image-compressor", title: "Image Compressor" },
-  ];
-
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("");
   const [quality, setQuality] = useState(60);
@@ -114,7 +109,7 @@ const Home = () => {
   };
 
   return (
-    <Breadcrumb paths={paths}>
+    <Breadcrumb>
       <AppContainer>
         {/* Image */}
         <div className="flex flex-col items-center justify-center min-h-[300px] px-4 py-8 sm:py-12 border rounded-md shadow-sm">

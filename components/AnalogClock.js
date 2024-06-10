@@ -1,10 +1,3 @@
-/**
- * author: Alain Iglesias
- * website: https://aiherrera.com
- *
- * There is an article explaining how this component was built in my blog
- * check it out: https://blog.aiherrera.com/
- */
 const AnalogClock = ({ time }) => {
   const clockNumbers = Array.from({ length: 12 }, (_, i) => i + 1);
 

@@ -290,7 +290,7 @@ const LIST_OF_APPS = [
     link: "/apps/world-clock",
     icon: "🕓",
     tag: "Latest",
-    isComplete: false,
+    isComplete: true,
     categories: ["Productivity", "Utility"],
   },
 ];

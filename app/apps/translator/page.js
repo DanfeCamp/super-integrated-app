@@ -13,7 +13,7 @@ import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
  */
 import Breadcrumb from "@components/Breadcrumb";
 import AppContainer from "@components/AppContainer";
-import { LANGUAGES } from "@utils/constants";
+import { LANGUAGES } from "@utils";
 
 const Home = () => {
   const options = LANGUAGES.map((option) => {

@@ -10,9 +10,8 @@ import Link from "next/link";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
-import { CURRENCY } from "@utils";
+import { Breadcrumb, AppContainer } from "@components";
+import { CURRENCY } from "@constants";
 
 const Home = () => {
   const [updatedTime, setUpdatedTime] = useState("");

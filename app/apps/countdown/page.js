@@ -10,8 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 
 const Home = () => {
   const notify = () =>

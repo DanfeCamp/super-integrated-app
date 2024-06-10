@@ -13,7 +13,7 @@ import {
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
+import Breadcrumb from "@components";
 
 const Home = () => {
   return (

@@ -8,9 +8,7 @@ import React, { useState, useEffect } from "react";
 /**
  * Internal dependencies.
  */
-import AppContainer from "@components/AppContainer";
-import Breadcrumb from "@components/Breadcrumb";
-import Checkbox from "@components/Checkbox";
+import { Breadcrumb, AppContainer, Checkbox } from "@components";
 
 const Home = () => {
   const minimumNumberOfCharacter = 4;

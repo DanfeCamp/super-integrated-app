@@ -8,11 +8,8 @@ import React, { useState } from "react";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
-import FilterBar from "@components/FilterBar";
-import TextCard from "@components/TextCard";
-import { AI_PROMPTS } from "@utils";
+import { Breadcrumb, AppContainer, FilterBar, TextCard } from "@components";
+import { AI_PROMPTS } from "@constants";
 
 const Home = () => {
   const AI_PROMPTS_TAGS = AI_PROMPTS.reduce((acc, current) => {

@@ -1,9 +1,13 @@
+/**
+ * External dependencies.
+ */
 import { Inter } from "next/font/google";
-import "@styles/globals.css";
 
-import Navbar from "@components/NavarWithMegaMenu";
-import Footer from "@components/FooterWithLogo";
-import Container from "@components/Container";
+/**
+ * Internal dependencies.
+ */
+import "@styles/globals.css";
+import { Navbar, Footer, Container } from "@components";
 
 const inter = Inter({ subsets: ["latin"] });
 

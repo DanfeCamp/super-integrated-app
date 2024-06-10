@@ -11,9 +11,8 @@ import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
-import { LANGUAGES } from "@utils";
+import { Breadcrumb, AppContainer } from "@components";
+import { LANGUAGES } from "@constants";
 
 const Home = () => {
   const options = LANGUAGES.map((option) => {

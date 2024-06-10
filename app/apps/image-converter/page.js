@@ -9,8 +9,7 @@ import { Select, Option } from "@material-tailwind/react";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 
 const Home = () => {
   const formats = ["PNG", "JPG", "JPEG", "WEBP", "AVIF"];

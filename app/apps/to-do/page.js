@@ -15,8 +15,7 @@ import {
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 import { uuid } from "@utils";
 
 const Home = () => {

@@ -9,11 +9,13 @@ import Select from "react-select";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
-import DynamicComponent from "@components/DynamicComponent";
-import AnalogClock from "@components/AnalogClock";
-import { TIMEZONES } from "@utils";
+import {
+  Breadcrumb,
+  AppContainer,
+  DynamicComponent,
+  AnalogClock,
+} from "@components";
+import { TIMEZONES } from "@constants";
 
 const Home = () => {
   const currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;

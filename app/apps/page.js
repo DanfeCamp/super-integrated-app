@@ -1,9 +1,8 @@
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import ClickableList from "@components/ClickableList";
-import { LIST_OF_APPS } from "@utils";
+import { Breadcrumb, ClickableList } from "@components";
+import { LIST_OF_APPS } from "@constants";
 
 const Home = () => {
   return (

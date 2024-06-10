@@ -1,8 +1,7 @@
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import FAQAccordion from "@components/AboutUsFAQAccordion";
+import { Breadcrumb, FAQAccordion } from "@components";
 
 const Home = () => {
   return (

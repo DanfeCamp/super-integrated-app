@@ -9,8 +9,7 @@ import Link from "next/link";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 
 const Home = () => {
   const initialForm = {

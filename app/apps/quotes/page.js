@@ -12,8 +12,7 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 
 const Home = () => {
   const tags = [

@@ -8,8 +8,7 @@ import React, { useState } from "react";
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppContainer from "@components/AppContainer";
+import { Breadcrumb, AppContainer } from "@components";
 import SitemapPreview from "./sitemapPreview";
 
 const Home = () => {

@@ -1,9 +1,8 @@
 /**
  * Internal dependencies.
  */
-import Breadcrumb from "@components/Breadcrumb";
-import AppCard from "@components/AppCard";
-import { LIST_OF_APPS } from "@utils";
+import { Breadcrumb, AppCard } from "@components";
+import { LIST_OF_APPS } from "@constants";
 
 const Home = () => {
   const LIST_OF_CATEGORIES = [

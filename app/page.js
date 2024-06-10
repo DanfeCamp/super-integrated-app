@@ -3,8 +3,8 @@
 /**
  * Internal dependencies.
  */
-import AppCard from "@components/AppCard";
-import { LIST_OF_APPS } from "@utils";
+import { AppCard } from "@components";
+import { LIST_OF_APPS } from "@constants";
 
 export default function Home() {
   const LIST_OF_TAGS = [

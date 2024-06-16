@@ -74,7 +74,7 @@ const LIST_OF_APPS = [
     link: "/apps/document-converter",
     icon: "📝",
     tag: "General",
-    isComplete: true,
+    isComplete: false,
     categories: ["Productivity", "Utility"],
   },
   {

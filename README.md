@@ -8,43 +8,33 @@ Super Integrated App (SIA) is a comprehensive web platform providing free access
 
 ## Tools List
 
-- AI Prompts
-- Audio Downloader
-- Book Summary
-- Color Generator
-- Cookie Details
-- Countdown
-- Crossword
-- Currency Converter
-- PDF Converter
-- Word Converter
-- PowerPoint Converter
-- File Converter (MP4 to MP3)
-- Hangman
-- Horoscope
-- Image Editor
-- Interest Rate Calculator
-- Jokes
-- JPG Converter
-- JPEG Converter
-- Name Generator
-- Password Generator
-- PDF Generator
-- PDF Coverter
-- PNG Converter
-- QR Generator
-- Quiz Game
-- Quotes
-- Recipe Finder
-- Sitemap Compiler
-- Snake
-- Sort Lists
-- Summary Generator
-- Tic-Tac-Toe
-- Timer
-- To-Do
-- Trivia Game
-- Video Downloader
-- Video Editor
-- Word Scramble
-- World Clock
+- [x] AI Prompts
+- [ ] Audio Converter
+- [ ] Audio Downloader
+- [x] Calculator
+- [x] Color Generator
+- [x] Cookie Details
+- [x] Countdown
+- [x] Currency Converter
+- [ ] Document Converter
+- [ ] Horoscope
+- [x] Image Compressor
+- [x] Image Converter
+- [ ] Image Editor
+- [x] Interest Calculator
+- [x] Jokes
+- [ ] Name Generator
+- [x] Password Generator
+- [x] QR Generator
+- [x] Quotes
+- [x] Sitemap Compiler
+- [x] Sort Lists
+- [ ] Summary Generator
+- [x] Tic-Tac-Toe
+- [x] Timer
+- [x] ToDo
+- [x] Translator
+- [ ] Video Converter
+- [ ] Video Downloader
+- [ ] Video Editor
+- [x] World Clock

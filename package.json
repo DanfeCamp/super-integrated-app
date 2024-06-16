@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "branch-naming-check": "branch-naming-check \"^(feat|fix|ref)/.*\"",
     "husky": "npm run lint && npm run branch-naming-check"
@@ -21,7 +21,9 @@
     "@mui/material": "^5.15.18",
     "@vitalets/google-translate-api": "^9.2.0",
     "html-to-image": "^1.11.11",
+    "libreoffice-file-converter": "^2.3.0",
     "next": "14.2.3",
+    "node-convert": "^0.1.1",
     "node-fetch": "^3.3.2",
     "papaparse": "^5.4.1",
     "react": "^18",

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies.
  */
-import { Breadcrumb, FAQAccordion } from "@components";
+import { Breadcrumb, AboutUsFAQAccordion } from "@components";
 
 const Home = () => {
   return (
@@ -54,7 +54,7 @@ const Home = () => {
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">
             FAQ
           </h1>
-          <FAQAccordion />
+          <AboutUsFAQAccordion />
         </div>
       </div>
     </Breadcrumb>

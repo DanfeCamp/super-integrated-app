@@ -113,7 +113,7 @@ const LIST_OF_APPS = [
     link: "/apps/image-editor",
     icon: "🖼️",
     tag: "Latest",
-    isComplete: false,
+    isComplete: true,
     categories: ["Media"],
   },
   {

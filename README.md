@@ -20,7 +20,7 @@ Super Integrated App (SIA) is a comprehensive web platform providing free access
 - [ ] Horoscope
 - [x] Image Compressor
 - [x] Image Converter
-- [ ] Image Editor
+- [x] Image Editor
 - [x] Interest Calculator
 - [x] Jokes
 - [ ] Name Generator

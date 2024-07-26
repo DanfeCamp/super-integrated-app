@@ -8,14 +8,14 @@ import React, { useState } from "react";
 /**
  * Internal dependencies.
  */
-import { Breadcrumb, AppContainer } from "@components";
+import { Breadcrumb, AppContainer, WorkInProgress } from "@components";
 
 const Home = () => {
   return (
     <Breadcrumb>
       <AppContainer>
-        {/*  */}
-        <div></div>
+        {/* Video Editor */}
+        <WorkInProgress />
 
         {/* Usage */}
         <div className="w-full flex flex-col gap-4 sm:gap-6">

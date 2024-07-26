@@ -12,3 +12,4 @@ export { default as Footer } from "./FooterWithLogo";
 export { default as Navbar } from "./NavbarWithMegaMenu";
 export { default as TextCard } from "./TextCard";
 export { default as TitleCard } from "./TitleCard";
+export { default as WorkInProgress } from "./WorkInProgress";

@@ -18,9 +18,12 @@ const Home = () => {
           return (
             <div
               key={app.title}
-              className={`w-full rounded-lg border ${
-                app.isComplete ? "border-green-600" : "border-red-600"
+              className={`w-full rounded-lg border border-gray-200 shadow-sm ${
+                app.isComplete ? "" : "hidden"
               }`}
+              // className={`w-full rounded-lg border ${
+              //   app.isComplete ? "border-green-600" : "border-red-600"
+              // }`}
             >
               <ClickableList
                 title={app.title}

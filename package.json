@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "NODE_ENV=production node server.js",
     "branch-naming-check": "branch-naming-check \"^(feat|fix|ref)/.*\"",
     "husky": "npm run branch-naming-check"
   },

@@ -189,7 +189,7 @@ const LIST_OF_APPS = [
     description:
       "Discover inspiration through an incredible selection of thought-provoking quotes to inspire, and motivate you.",
     link: "/apps/quotes",
-    tag: "General",
+    tag: "Latest",
     isComplete: true,
     categories: ["General"],
   },

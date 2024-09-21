@@ -42,7 +42,7 @@ export default function Home() {
               <span className="text-gray-500">#</span> {tag}
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-center items-center">
-              {LIST_OF_APPS.filter((app) => app.tag === tag)
+              {LIST_OF_APPS.filter((app) => app.tag === tag && app.isComplete === true)
                 .slice(0, 8)
                 .map((app) => {
                   return (

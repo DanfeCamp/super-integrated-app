@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
 
+  // The production host (Passenger + FTP deploy) serves the build from `_next`.
+  distDir: "_next",
+
   // Don't let `next dev` write AGENTS.md / CLAUDE.md into the repo root.
   agentRules: false,
 

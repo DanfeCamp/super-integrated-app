@@ -33,16 +33,16 @@ Stopwatch · Countdown · World Clock · To-Do List
 
 **Images & Media** — Image Compressor · Image Converter · Image Editor
 
-**Text & Language** — Translator · Sort Lists · AI Prompt Library
+**Text & Language** — Translator · Sort Lists
 
 **Web & Developer** — QR Code Generator · Sitemap Compiler · Colour Generator ·
 Password Generator · Cookie Inspector
 
-**Fun & Inspiration** — Quotes · Jokes · Tic-Tac-Toe
+**Fun & Inspiration** — Quotes · Tic-Tac-Toe
 
 On the roadmap: Audio Converter, Audio Downloader, Video Converter, Video
-Downloader, Video Editor, Document Converter, Summary Generator, Name
-Generator, Horoscope. Each already has a route and a placeholder page.
+Downloader, Video Editor, Document Converter, Name Generator. Each already has
+a route and a placeholder page.
 
 Most tools run entirely in your browser — nothing is uploaded. The rest call a
 first-party API route that processes the request and returns the result without
@@ -53,7 +53,7 @@ storing it.
 ```
 app/
   apps/<slug>/           one folder per tool: page.tsx + <slug>-tool.tsx
-  api/                   route handlers (image, translate, quotes, jokes, …)
+  api/                   route handlers (image, translate, quotes, rates, …)
   categories/            category index and per-category pages
   sitemap.ts robots.ts manifest.ts opengraph-image.tsx
 components/

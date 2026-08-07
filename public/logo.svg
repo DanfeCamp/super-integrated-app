@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!--
+    SIA brand mark. Four cells with one resolved into a dot: many separate
+    tools, one place. Colours are the violet brand token flattened to sRGB so
+    the file renders identically as a favicon, an app icon and an <img>.
+    Geometry is on a 64-unit grid — every value stays whole or on a half, which
+    keeps the edges crisp when it is rasterised down to 16px.
+  -->
+  <defs>
+    <linearGradient id="sia-tile" x1="2" y1="0" x2="60" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8464fb" />
+      <stop offset="1" stop-color="#5a44d8" />
+    </linearGradient>
+    <linearGradient id="sia-sheen" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".28" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#sia-tile)" />
+  <rect width="64" height="64" rx="18" fill="url(#sia-sheen)" />
+
+  <g fill="#ffffff">
+    <rect x="14" y="14" width="16" height="16" rx="4.7" />
+    <rect x="34" y="14" width="16" height="16" rx="4.7" opacity=".62" />
+    <rect x="14" y="34" width="16" height="16" rx="4.7" opacity=".62" />
+    <circle cx="42" cy="42" r="8" />
+  </g>
+</svg>

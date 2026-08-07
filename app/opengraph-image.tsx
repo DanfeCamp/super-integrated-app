@@ -35,21 +35,7 @@ export default async function OpenGraphImage({
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-        <div
-          style={{
-            width: 64,
-            height: 64,
-            borderRadius: 18,
-            background: "linear-gradient(135deg, #8b5cf6, #6366f1)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 36,
-            fontWeight: 700,
-          }}
-        >
-          S
-        </div>
+        <LogoMark />
         <div style={{ display: "flex", flexDirection: "column" }}>
           <span style={{ fontSize: 30, fontWeight: 600 }}>
             {siteConfig.name}
@@ -98,5 +84,39 @@ export default async function OpenGraphImage({
       </div>
     </div>,
     size
+  );
+}
+
+/**
+ * The brand mark rebuilt in flexbox. Satori only implements a subset of SVG, so
+ * `public/logo.svg` is reproduced with boxes here rather than referenced —
+ * same 64-unit geometry, same colours, no renderer surprises at build time.
+ */
+function LogoMark() {
+  const cell = {
+    width: 16,
+    height: 16,
+    borderRadius: 4.7,
+    background: "#ffffff",
+  };
+
+  return (
+    <div
+      style={{
+        width: 64,
+        height: 64,
+        borderRadius: 18,
+        padding: 14,
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 4,
+        background: "linear-gradient(135deg, #8464fb, #5a44d8)",
+      }}
+    >
+      <div style={cell} />
+      <div style={{ ...cell, opacity: 0.62 }} />
+      <div style={{ ...cell, opacity: 0.62 }} />
+      <div style={{ ...cell, borderRadius: 999 }} />
+    </div>
   );
 }

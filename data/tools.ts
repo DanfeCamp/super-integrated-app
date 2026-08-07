@@ -64,7 +64,7 @@ export const toolCategories: ToolCategory[] = [
     id: "text",
     name: "Text & Language",
     description:
-      "Translate, sort, summarise and generate text with tools built for writers.",
+      "Translate, sort and tidy up text with tools built for writers.",
     gradient: "from-emerald-500/15 to-teal-500/10",
     foreground: "text-emerald-700 dark:text-emerald-300",
   },
@@ -79,8 +79,7 @@ export const toolCategories: ToolCategory[] = [
   {
     id: "fun",
     name: "Fun & Inspiration",
-    description:
-      "Quotes, jokes, games and prompts for when you need a break or a spark.",
+    description: "Quotes and games for when you need a break or a spark.",
     gradient: "from-rose-500/15 to-pink-500/10",
     foreground: "text-rose-700 dark:text-rose-300",
   },
@@ -366,34 +365,6 @@ export const tools: Tool[] = [
     ],
   },
   {
-    slug: "ai-prompts",
-    name: "AI Prompt Library",
-    tagline: "A searchable library of prompts for any AI assistant.",
-    description:
-      "Browse a curated library of prompts for writing, coding, business and study, grouped by theme and searchable by keyword. Copy any prompt straight into your AI assistant.",
-    category: "text",
-    status: "live",
-    featured: true,
-    keywords: ["prompt", "chatgpt", "claude", "llm", "ai", "writing"],
-    usage: [
-      "Search across every prompt, or filter by category with the chips.",
-      "Each card shows the full prompt text — nothing is truncated.",
-      "Copy a prompt to your clipboard with the button on its card.",
-      "Paste it into your assistant and edit the placeholders to suit.",
-    ],
-  },
-  {
-    slug: "summary-generator",
-    name: "Summary Generator",
-    tagline: "Turn long articles into short summaries.",
-    description:
-      "Condense long articles and documents into short, readable summaries so you can get the gist in seconds.",
-    category: "text",
-    status: "planned",
-    keywords: ["summary", "tldr", "condense", "abstract"],
-    usage: [],
-  },
-  {
     slug: "name-generator",
     name: "Name Generator",
     tagline: "Generate names for characters, products and projects.",
@@ -520,28 +491,6 @@ export const tools: Tool[] = [
     ],
   },
   {
-    slug: "jokes",
-    name: "Jokes",
-    tagline: "Setup, punchline, repeat.",
-    description:
-      "A steady supply of jokes with the punchline hidden until you want it. Filter by type — programming, knock-knock or anything goes.",
-    category: "fun",
-    status: "live",
-    keywords: ["joke", "funny", "humour", "humor", "pun", "laugh"],
-    usage: [
-      "The setup is shown first — reveal the punchline when you're ready.",
-      "Filter by type to get programming or knock-knock jokes specifically.",
-      "Press New joke, or hit Space, for another one.",
-      "Copy the whole joke with the copy button.",
-    ],
-    sources: [
-      {
-        label: "Official Joke API",
-        href: "https://github.com/15Dkatz/official_joke_api",
-      },
-    ],
-  },
-  {
     slug: "tic-tac-toe",
     name: "Tic-Tac-Toe",
     tagline: "Play a friend or take on the computer.",
@@ -556,17 +505,6 @@ export const tools: Tool[] = [
       "The winning line is highlighted when the game ends.",
       "Jump back to any earlier move using the history list.",
     ],
-  },
-  {
-    slug: "horoscope",
-    name: "Horoscope",
-    tagline: "Your daily reading, one sign at a time.",
-    description:
-      "Read a daily horoscope for your star sign, with the traits and dates that go with it.",
-    category: "fun",
-    status: "planned",
-    keywords: ["zodiac", "astrology", "star sign", "daily"],
-    usage: [],
   },
 ];
 

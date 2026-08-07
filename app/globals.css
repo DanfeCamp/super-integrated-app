@@ -343,6 +343,46 @@
   animation-delay: calc(--value(integer) * 1ms);
 }
 
+/* Reading position rail under the sticky header.
+
+   Driven by the scroll timeline rather than a scroll listener: the animation
+   runs off the main thread, so it can't contend with anything the page is
+   doing. Browsers without scroll-driven animations simply get a rail that
+   stays at zero width, which is why it starts scaled to nothing. */
+.scroll-progress {
+  transform: scaleX(0);
+  transform-origin: left center;
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--primary) 40%, transparent),
+    var(--primary)
+  );
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* The reduced-motion clamp on animation-duration would pin this at full width,
+   so hide it outright rather than show a permanently complete bar. */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress {
+    display: none;
+  }
+}
+
 /* Skeleton sweep — pure background animation, no layout cost. */
 @utility shimmer {
   background-image: linear-gradient(

@@ -25,6 +25,14 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Remove dev dependencies
+        run: npm prune --omit=dev
+
+      - name: Trigger Passenger restart on deploy
+        run: |
+          mkdir -p tmp
+          touch tmp/restart.txt
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:

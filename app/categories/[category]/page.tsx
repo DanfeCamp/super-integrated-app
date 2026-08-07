@@ -12,7 +12,6 @@ import {
   getLiveToolsByCategory,
   getToolsByCategory,
   toolCategories,
-  type ToolCategoryId,
 } from "@/data/tools";
 import { breadcrumbJsonLd, buildMetadata, itemListJsonLd } from "@/lib/seo";
 import { pluralize } from "@/lib/utils";
@@ -37,14 +36,18 @@ export async function generateMetadata({
   const category = findCategory(id);
   if (!category) return {};
 
-  const count = getLiveToolsByCategory(category.id as ToolCategoryId).length;
+  const count = getLiveToolsByCategory(category.id).length;
+  const short = category.shortName.toLowerCase();
 
   return buildMetadata({
-    title: `${category.name} tools`,
-    description: `${category.description} ${count} free ${category.name.toLowerCase()} ${pluralize(count, "tool")} on SIA — no sign-up required.`,
+    // `shortName` rather than the display name throughout: "Developer Tools
+    // tools" is the kind of thing a template writes and nobody reads back.
+    title: category.name,
+    description: `${category.description} ${count} free ${short} ${pluralize(count, "tool")} on SIA — no sign-up required.`,
     path: `/categories/${category.id}`,
     keywords: [
-      `${category.name.toLowerCase()} tools`,
+      `${short} tools`,
+      `online ${short} tools`,
       "free online tools",
       "web utilities",
     ],
@@ -68,7 +71,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
 
   return (
     <>
-      <JsonLd data={itemListJsonLd(`${category.name} tools`, live)} />
+      <JsonLd data={itemListJsonLd(category.name, live)} />
       <JsonLd
         data={breadcrumbJsonLd([{ name: "Home", href: "/" }, ...crumbs])}
       />
@@ -90,7 +93,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
         {live.length > 0 ? (
           <section aria-labelledby="available-tools">
             <h2 id="available-tools" className="sr-only">
-              Available {category.name.toLowerCase()} tools
+              Available {category.shortName.toLowerCase()} tools
             </h2>
             <ToolGrid tools={live} showCategory={false} />
           </section>

@@ -110,7 +110,9 @@ export function ToolListItem({ tool }: { tool: Tool }) {
           category.foreground
         )}
       >
-        {category.name}
+        {/* Short name in the row's right rail — the full one competes with the
+            tagline for the same line. */}
+        {category.shortName}
       </span>
     </>
   );

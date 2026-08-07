@@ -10,6 +10,7 @@ import {
   featuredTools,
   getLiveToolsByCategory,
   liveTools,
+  spotlightTools,
   toolCategories,
 } from "@/data/tools";
 import { siteConfig } from "@/lib/site";
@@ -167,7 +168,7 @@ function Hero() {
         </div>
 
         <ul className="animate-fade-up animate-delay-120 mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2">
-          {featuredTools.slice(0, 5).map((tool) => (
+          {spotlightTools.slice(0, 5).map((tool) => (
             <li key={tool.slug}>
               <Link
                 href={`/apps/${tool.slug}`}

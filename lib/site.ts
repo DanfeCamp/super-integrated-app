@@ -36,6 +36,7 @@ export const siteConfig = {
 export type SiteConfig = typeof siteConfig;
 
 export const mainNav = [
+  { title: "Home", href: "/" },
   { title: "All tools", href: "/apps" },
   { title: "Categories", href: "/categories" },
   { title: "About", href: "/about-us" },

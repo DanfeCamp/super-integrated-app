@@ -26,6 +26,12 @@ import { Logo } from "@/components/layout/logo";
 import { categoryEntries } from "@/components/layout/nav-data";
 import { ToolIconTile } from "@/components/tools/tool-icon-tile";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Sheet,
   SheetContent,
   SheetDescription,
@@ -33,7 +39,7 @@ import {
 } from "@/components/ui/sheet";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { categoryIcons } from "@/data/category-icons";
-import { featuredTools, liveTools } from "@/data/tools";
+import { liveTools } from "@/data/tools";
 import { useMounted } from "@/hooks/use-mounted";
 import { useRecentTools } from "@/hooks/use-recent-tools";
 import { siteConfig } from "@/lib/site";
@@ -58,6 +64,11 @@ const socials = [
  * rather than a full-screen takeover: it keeps a sliver of the page visible so
  * the overlay reads as temporary, and it puts every row within thumb reach of
  * the edge the thumb already rests on.
+ *
+ * Tools are reached the same way as on desktop — category first — but as an
+ * accordion rather than a rail: on touch, one collapsed row per category beats
+ * a list of every tool the site has, and it stays that way as the catalogue
+ * grows.
  */
 export function MobileNav({
   open,
@@ -71,6 +82,20 @@ export function MobileNav({
   isActive: (href: string) => boolean;
 }) {
   const recent = useRecentTools();
+  const [openCategory, setOpenCategory] = React.useState("");
+
+  // Opening the last category would otherwise expand its tools below the fold
+  // with no hint that anything happened. Runs after the expand animation so the
+  // browser scrolls to the item's final height, not its collapsed one.
+  React.useEffect(() => {
+    if (!openCategory) return;
+    const timer = window.setTimeout(() => {
+      document
+        .querySelector(`[data-nav-category="${openCategory}"]`)
+        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, 220);
+    return () => window.clearTimeout(timer);
+  }, [openCategory]);
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
@@ -119,39 +144,6 @@ export function MobileNav({
               </ul>
             </Section>
 
-            <Section title="Categories">
-              <ul className="flex flex-col gap-0.5">
-                {categoryEntries.map(({ category, count }) => {
-                  const Icon = categoryIcons[category.id];
-                  return (
-                    <li key={category.id}>
-                      <Link
-                        href={`/categories/${category.id}`}
-                        className="hover:bg-accent/60 flex items-center gap-3 rounded-lg p-2 transition-colors"
-                      >
-                        <span
-                          aria-hidden
-                          className={cn(
-                            "ring-border/60 grid size-9 shrink-0 place-items-center rounded-lg bg-linear-to-br ring-1 ring-inset",
-                            category.gradient,
-                            category.foreground
-                          )}
-                        >
-                          <Icon className="size-4.5" strokeWidth={1.75} />
-                        </span>
-                        <span className="min-w-0 flex-1 text-sm font-medium">
-                          {category.name}
-                        </span>
-                        <span className="text-muted-foreground shrink-0 text-xs tabular-nums">
-                          {count}
-                        </span>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </Section>
-
             {recent.length > 0 ? (
               <Section title="Jump back in">
                 <ul className="flex flex-wrap gap-2">
@@ -174,27 +166,83 @@ export function MobileNav({
               </Section>
             ) : null}
 
-            <Section title="Popular tools">
-              <ul className="flex flex-col gap-0.5">
-                {featuredTools.slice(0, 6).map((tool) => (
-                  <li key={tool.slug}>
-                    <Link
-                      href={`/apps/${tool.slug}`}
-                      className="hover:bg-accent/60 flex items-center gap-3 rounded-lg p-2 transition-colors"
+            <Section title="Browse by category">
+              {/* Collapsible rather than always-open: the whole catalogue is
+                  reachable in two taps without a screen and a half of scroll. */}
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full"
+                value={openCategory}
+                onValueChange={setOpenCategory}
+              >
+                {categoryEntries.map(({ category, tools, count }) => {
+                  const Icon = categoryIcons[category.id];
+
+                  return (
+                    <AccordionItem
+                      key={category.id}
+                      value={category.id}
+                      data-nav-category={category.id}
+                      className="border-border/60"
                     >
-                      <ToolIconTile tool={tool} size="sm" />
-                      <span className="min-w-0 flex-1">
-                        <span className="block truncate text-sm font-medium">
-                          {tool.name}
+                      <AccordionTrigger className="hover:text-foreground items-center gap-3 py-2.5 text-sm">
+                        <span className="flex min-w-0 flex-1 items-center gap-3">
+                          <span
+                            aria-hidden
+                            className={cn(
+                              "ring-border/60 grid size-9 shrink-0 place-items-center rounded-lg bg-linear-to-br ring-1 ring-inset",
+                              category.gradient,
+                              category.foreground
+                            )}
+                          >
+                            <Icon className="size-4.5" strokeWidth={1.75} />
+                          </span>
+                          <span className="min-w-0 flex-1 truncate text-left font-medium">
+                            {category.name}
+                          </span>
+                          <span className="text-muted-foreground shrink-0 text-xs tabular-nums">
+                            {count}
+                          </span>
                         </span>
-                        <span className="text-muted-foreground block truncate text-xs">
-                          {tool.tagline}
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                      </AccordionTrigger>
+
+                      <AccordionContent className="pt-0 pb-3">
+                        <ul className="flex flex-col gap-0.5">
+                          {tools.map((tool) => (
+                            <li key={tool.slug}>
+                              <Link
+                                href={`/apps/${tool.slug}`}
+                                className="hover:bg-accent/60 text-foreground flex items-center gap-3 rounded-lg p-2 transition-colors"
+                              >
+                                <ToolIconTile
+                                  tool={tool}
+                                  size="sm"
+                                  className="size-7 rounded-md [&_svg]:size-3.5"
+                                />
+                                <span className="min-w-0 flex-1 truncate text-sm">
+                                  {tool.name}
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <Link
+                          href={`/categories/${category.id}`}
+                          className="text-primary group mt-1 ml-2 inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                        >
+                          All {category.shortName.toLowerCase()}
+                          <ArrowRight
+                            aria-hidden
+                            className="size-3 transition-transform group-hover:translate-x-0.5"
+                          />
+                        </Link>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </Accordion>
             </Section>
 
             <Link

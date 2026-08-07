@@ -13,7 +13,7 @@ import { ToolIconTile } from "@/components/tools/tool-icon-tile";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { categoryIcons } from "@/data/category-icons";
-import { featuredTools, liveTools } from "@/data/tools";
+import { liveTools, spotlightTools } from "@/data/tools";
 import { footerNav, siteConfig, type NavLink } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import pkg from "@/package.json";
@@ -149,7 +149,7 @@ export function SiteFooter() {
           className="border-border/60 grid grid-cols-2 gap-x-6 gap-y-10 border-t py-12 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8"
         >
           <Column title="Popular tools" id="footer-popular">
-            {featuredTools.slice(0, 6).map((tool) => (
+            {spotlightTools.slice(0, 6).map((tool) => (
               <li key={tool.slug}>
                 <Link
                   href={`/apps/${tool.slug}`}

@@ -132,7 +132,9 @@ export function ToolBrowser({ tools }: { tools: Tool[] }) {
               count={counts.get(item.id) ?? 0}
               onClick={() => setCategory(item.id)}
             >
-              {item.name}
+              {/* Short names here: seven full names wrap to three rows of
+                  chips and push the results below the fold. */}
+              {item.shortName}
             </FilterChip>
           ))}
         </div>

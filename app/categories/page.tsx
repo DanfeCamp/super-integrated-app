@@ -13,7 +13,7 @@ import { cn, pluralize } from "@/lib/utils";
 export const metadata: Metadata = buildMetadata({
   title: "Categories",
   description:
-    "Browse SIA's tools by category — everyday utilities, image and media tools, text and language helpers, web and developer tools, and games.",
+    "Browse SIA's tools by category — calculators and converters, productivity and time, text and writing, images and media, developer tools, generators, and games.",
   path: "/categories",
   keywords: ["tool categories", "browse tools", "online utilities"],
 });
@@ -33,7 +33,7 @@ export default function CategoriesPage() {
         <PageHeader
           eyebrow="Browse"
           title="Categories"
-          description="Five groups covering everything on SIA. Pick the one that matches what you're trying to do."
+          description={`${toolCategories.length} groups covering everything on SIA. Pick the one that matches what you're trying to do.`}
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

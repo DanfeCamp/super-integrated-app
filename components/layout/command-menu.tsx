@@ -4,6 +4,7 @@ import { ArrowRight, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import * as React from "react";
 
+import { categoryEntries } from "@/components/layout/nav-data";
 import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
@@ -15,12 +16,13 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Kbd } from "@/components/ui/kbd";
+import { categoryIcons } from "@/data/category-icons";
 import { getToolIcon } from "@/data/tool-icons";
 import {
   getCategory,
   liveTools,
   searchTools,
-  toolCategories,
+  spotlightTools,
 } from "@/data/tools";
 import { useRecentTools } from "@/hooks/use-recent-tools";
 import { mainNav } from "@/lib/site";
@@ -127,7 +129,7 @@ export function CommandMenu({
 
         {results.length > 0 ? (
           <CommandGroup heading={query ? "Tools" : "Popular tools"}>
-            {(query ? results : liveTools.slice(0, 6)).map((tool) => {
+            {(query ? results : spotlightTools.slice(0, 6)).map((tool) => {
               const Icon = getToolIcon(tool.slug);
               const category = getCategory(tool.category);
               return (
@@ -152,20 +154,28 @@ export function CommandMenu({
 
         <CommandSeparator />
 
-        <CommandGroup heading="Categories">
-          {toolCategories.map((category) => (
-            <CommandItem
-              key={category.id}
-              value={`category ${category.name}`}
-              onSelect={() => go(`/categories/${category.id}`)}
-            >
-              <ArrowRight
-                className="text-muted-foreground size-4"
-                aria-hidden
-              />
-              <span>{category.name}</span>
-            </CommandItem>
-          ))}
+        <CommandGroup heading="Browse by category">
+          {categoryEntries.map(({ category, count }) => {
+            const Icon = categoryIcons[category.id];
+            return (
+              <CommandItem
+                key={category.id}
+                // Both names are searchable: someone typing "images" should
+                // land on "Images & Media" even though the chip says "Images".
+                value={`category ${category.name} ${category.shortName}`}
+                onSelect={() => go(`/categories/${category.id}`)}
+              >
+                <Icon
+                  className={cn("size-4", category.foreground)}
+                  aria-hidden
+                />
+                <span className="flex-1 truncate">{category.name}</span>
+                <span className="text-muted-foreground shrink-0 text-xs tabular-nums">
+                  {count}
+                </span>
+              </CommandItem>
+            );
+          })}
         </CommandGroup>
 
         <CommandGroup heading="Pages">

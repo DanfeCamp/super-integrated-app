@@ -133,6 +133,12 @@ function CommandSeparator({
   return (
     <CommandPrimitive.Separator
       data-slot="command-separator"
+      // cmdk hard-codes `role="separator"` after spreading props, and a
+      // separator isn't a permitted child of the list's `role="listbox"`. The
+      // rule is purely visual here — groups already carry their own labels — so
+      // take it out of the accessibility tree rather than leave the listbox
+      // invalid.
+      aria-hidden
       className={cn("bg-border -mx-1 my-1 h-px", className)}
       {...props}
     />

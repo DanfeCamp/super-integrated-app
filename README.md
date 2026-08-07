@@ -28,23 +28,30 @@ tags, the sitemap and JSON-LD all resolve correctly. It defaults to
 
 ## The tools
 
-**Everyday** — Calculator · Currency Converter · Interest Calculator ·
-Loan Calculator · Percentage Calculator · Unit Converter · Stopwatch ·
-Countdown · Pomodoro Timer · World Clock · To-Do List
+Seven categories, each named after what you are trying to do rather than what
+the tool is built from. A new tool joins an existing one; adding a category is
+rare and deliberate.
 
-**Images & Media** — Image Compressor · Image Converter · Image Editor ·
-Image Resizer · Audio to WAV Converter
+**Calculators & Converters** — Calculator · Percentage Calculator ·
+Unit Converter · Currency Converter · Interest Calculator · Loan Calculator
 
-**Text & Language** — Translator · Word Counter · Case Converter ·
-Diff Checker · Sort Lists · Name Generator
+**Productivity & Time** — To-Do List · Pomodoro Timer · Stopwatch ·
+Countdown · World Clock
 
-**Web & Developer** — JSON Formatter · Regex Tester ·
+**Text & Writing** — Word Counter · Case Converter · Diff Checker ·
+Sort Lists · Translator
+
+**Images & Media** — Image Compressor · Image Resizer · Image Converter ·
+Image Editor · Audio to WAV Converter
+
+**Developer Tools** — JSON Formatter · Regex Tester ·
 CSV to JSON Converter · Base64 Encoder & Decoder · JWT Decoder ·
-UUID Generator · Hash Generator · URL Parser · Cron Expression Helper ·
-QR Code Generator · Sitemap Compiler · Colour Generator ·
-Password Generator · Cookie Inspector
+Hash Generator · URL Parser · Cron Expression Helper · Cookie Inspector
 
-**Fun & Inspiration** — Quotes · Tic-Tac-Toe
+**Generators** — UUID Generator · Password Generator · QR Code Generator ·
+Colour Generator · Name Generator · Sitemap Compiler
+
+**Fun & Games** — Quotes · Tic-Tac-Toe
 
 Every tool in the registry is fully implemented. Marking a registry entry
 `status: "planned"` renders a polished placeholder via `ComingSoon` and drops
@@ -79,6 +86,12 @@ Imports use the `@/*` alias, which maps to the project root — `@/lib/utils`,
 `data/tools.ts` is the single source of truth. One entry drives the tool's
 card, its category page, search, breadcrumbs, page metadata, JSON-LD, the
 related-tools rail and the sitemap.
+
+Categories are declared in the same file and consumed through
+`components/layout/nav-data.ts`, which pairs each one with its live tools. The
+header's Tools menu, the mobile sheet, the footer and the command palette all
+render from that one derived list, so a new tool appears in every navigation
+surface as soon as its registry entry lands.
 
 ### Adding a tool
 

@@ -76,7 +76,7 @@ export function ToolShell({
                 href={`/categories/${category.id}`}
                 className="text-primary text-sm font-medium hover:underline"
               >
-                All {category.name.toLowerCase()} tools
+                All {category.shortName.toLowerCase()} tools
               </Link>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

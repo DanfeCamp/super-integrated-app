@@ -93,7 +93,7 @@ export function ComingSoon({ slug }: { slug: string }) {
                 href={`/categories/${category.id}`}
                 className="text-primary text-sm font-medium hover:underline"
               >
-                All {category.name.toLowerCase()} tools
+                All {category.shortName.toLowerCase()} tools
               </Link>
             ) : null}
           </div>

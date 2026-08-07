@@ -56,7 +56,7 @@ export const toolCategories: ToolCategory[] = [
     id: "media",
     name: "Images & Media",
     description:
-      "Compress, convert and edit images, audio and video without installing anything.",
+      "Compress, convert and edit images and audio without installing anything.",
     gradient: "from-sky-500/15 to-cyan-500/10",
     foreground: "text-sky-700 dark:text-sky-300",
   },
@@ -259,69 +259,28 @@ export const tools: Tool[] = [
   },
   {
     slug: "audio-converter",
-    name: "Audio Converter",
-    tagline: "Convert audio files between common formats.",
+    name: "Audio to WAV Converter",
+    tagline: "Turn any audio file into lossless WAV, entirely on your device.",
     description:
-      "Convert audio files between MP3, WAV, OGG and other common formats without installing software.",
+      "Decode MP3, M4A, AAC, FLAC, OGG or Opus and export uncompressed WAV, with control over sample rate, bit depth, channels and trim. Everything runs through the Web Audio API in your browser — the file is never uploaded.",
     category: "media",
-    status: "planned",
-    keywords: ["mp3", "wav", "ogg", "sound", "music"],
-    usage: [],
-  },
-  {
-    slug: "audio-downloader",
-    name: "Audio Downloader",
-    tagline: "Save audio for offline listening.",
-    description:
-      "Download audio from supported sources so you can listen to music and podcasts offline.",
-    category: "media",
-    status: "planned",
-    keywords: ["download", "music", "podcast", "offline"],
-    usage: [],
-  },
-  {
-    slug: "video-converter",
-    name: "Video Converter",
-    tagline: "Convert video between MP4, MOV, AVI and more.",
-    description:
-      "Convert video files between MP4, MOV, AVI, WebM and other common container formats.",
-    category: "media",
-    status: "planned",
-    keywords: ["mp4", "mov", "avi", "webm", "transcode"],
-    usage: [],
-  },
-  {
-    slug: "video-downloader",
-    name: "Video Downloader",
-    tagline: "Save videos for offline viewing.",
-    description:
-      "Download videos from supported sources for offline viewing on any device.",
-    category: "media",
-    status: "planned",
-    keywords: ["download", "offline", "save video"],
-    usage: [],
-  },
-  {
-    slug: "video-editor",
-    name: "Video Editor",
-    tagline: "Trim, crop and export video in the browser.",
-    description:
-      "Trim, crop and export video clips directly in your browser, with no upload and no install.",
-    category: "media",
-    status: "planned",
-    keywords: ["trim", "cut", "clip", "edit video"],
-    usage: [],
-  },
-  {
-    slug: "document-converter",
-    name: "Document Converter",
-    tagline: "Convert documents between PDF, DOCX and ODT.",
-    description:
-      "Convert documents between PDF, DOCX, ODT and other common office formats.",
-    category: "media",
-    status: "planned",
-    keywords: ["pdf", "docx", "odt", "word", "office"],
-    usage: [],
+    status: "live",
+    keywords: [
+      "mp3 to wav",
+      "m4a to wav",
+      "audio",
+      "convert",
+      "pcm",
+      "resample",
+      "sound",
+      "music",
+    ],
+    usage: [
+      "Drop an audio file onto the upload area, or click to browse for one.",
+      "Set the sample rate, bit depth and channel layout you need — or leave them on Original.",
+      "Drag the trim handles to export just part of the track, and normalise if it's quiet.",
+      "Convert, preview the result, then download the WAV.",
+    ],
   },
 
   /* --------------------------------- text -------------------------------- */
@@ -367,13 +326,27 @@ export const tools: Tool[] = [
   {
     slug: "name-generator",
     name: "Name Generator",
-    tagline: "Generate names for characters, products and projects.",
+    tagline: "Invent names for brands, projects, characters and usernames.",
     description:
-      "Generate names for characters, products, projects and brands from a set of style presets.",
+      "Generate names in five distinct styles — brandable coinages, startup-style words, project codenames, fantasy characters and usernames. Filter by length and starting letter, keep the ones you like, and copy the shortlist in one go.",
     category: "text",
-    status: "planned",
-    keywords: ["names", "brand", "character", "random", "generator"],
-    usage: [],
+    status: "live",
+    keywords: [
+      "names",
+      "brand",
+      "startup",
+      "character",
+      "username",
+      "codename",
+      "random",
+      "generator",
+    ],
+    usage: [
+      "Pick a style — each one uses a different construction, not the same list reshuffled.",
+      "Narrow the results by length or by the letter they start with.",
+      "Press Generate, or hit Space, for a fresh batch.",
+      "Star the ones worth keeping — your shortlist is saved in this browser.",
+    ],
   },
 
   /* ------------------------------ developer ------------------------------ */

@@ -3,10 +3,7 @@ import {
   ArrowRightLeft,
   AudioLines,
   Calculator,
-  Clapperboard,
   Cookie,
-  FileText,
-  FileVideo,
   Globe,
   Grid3x3,
   Hourglass,
@@ -15,8 +12,6 @@ import {
   KeyRound,
   Languages,
   ListChecks,
-  MonitorDown,
-  Music4,
   Network,
   Palette,
   PiggyBank,
@@ -35,13 +30,11 @@ import {
  */
 export const toolIcons: Record<string, LucideIcon> = {
   "audio-converter": AudioLines,
-  "audio-downloader": Music4,
   calculator: Calculator,
   "color-generator": Palette,
   "cookie-details": Cookie,
   countdown: Hourglass,
   "currency-converter": ArrowRightLeft,
-  "document-converter": FileText,
   "image-compressor": ImageMinus,
   "image-converter": Images,
   "image-editor": Wand2,
@@ -56,9 +49,6 @@ export const toolIcons: Record<string, LucideIcon> = {
   timer: Timer,
   "to-do": ListChecks,
   translator: Languages,
-  "video-converter": FileVideo,
-  "video-downloader": MonitorDown,
-  "video-editor": Clapperboard,
   "world-clock": Globe,
 };
 

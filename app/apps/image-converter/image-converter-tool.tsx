@@ -201,7 +201,14 @@ export function ImageConverterTool() {
       </Card>
 
       <Card className={cn(!result && "border-dashed")}>
-        <CardContent className="flex min-h-72 flex-col gap-5">
+        {/* The result arrives after an explicit action the user is waiting on,
+            so it is worth announcing rather than leaving purely visual. */}
+        <CardContent
+          role="status"
+          aria-live="polite"
+          aria-busy={busy}
+          className="flex min-h-72 flex-col gap-5"
+        >
           <h2 className="text-sm font-semibold">Result</h2>
 
           {busy ? (

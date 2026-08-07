@@ -31,18 +31,19 @@ tags, the sitemap and JSON-LD all resolve correctly. It defaults to
 **Everyday** — Calculator · Currency Converter · Interest Calculator ·
 Stopwatch · Countdown · World Clock · To-Do List
 
-**Images & Media** — Image Compressor · Image Converter · Image Editor
+**Images & Media** — Image Compressor · Image Converter · Image Editor ·
+Audio to WAV Converter
 
-**Text & Language** — Translator · Sort Lists
+**Text & Language** — Translator · Sort Lists · Name Generator
 
 **Web & Developer** — QR Code Generator · Sitemap Compiler · Colour Generator ·
 Password Generator · Cookie Inspector
 
 **Fun & Inspiration** — Quotes · Tic-Tac-Toe
 
-On the roadmap: Audio Converter, Audio Downloader, Video Converter, Video
-Downloader, Video Editor, Document Converter, Name Generator. Each already has
-a route and a placeholder page.
+Every tool in the registry is fully implemented. Marking a registry entry
+`status: "planned"` renders a polished placeholder via `ComingSoon` and drops
+the route from the sitemap — nothing else is needed to stage a future tool.
 
 Most tools run entirely in your browser — nothing is uploaded. The rest call a
 first-party API route that processes the request and returns the result without

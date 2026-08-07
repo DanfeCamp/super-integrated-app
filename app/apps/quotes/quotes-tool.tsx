@@ -39,13 +39,25 @@ export function QuotesTool() {
   const [busy, setBusy] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
 
+  const abortRef = React.useRef<AbortController | null>(null);
+
+  React.useEffect(() => () => abortRef.current?.abort(), []);
+
   const load = React.useCallback(async (selectedTag: string) => {
+    // Theme chips fire a request each and the API is not uniformly fast, so
+    // without this a slower earlier response can land last and leave a quote
+    // from the wrong theme on screen.
+    abortRef.current?.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+
     setBusy(true);
     setError(null);
 
     try {
       const response = await fetch(
-        `/api/quotes?tag=${encodeURIComponent(selectedTag)}`
+        `/api/quotes?tag=${encodeURIComponent(selectedTag)}`,
+        { signal: controller.signal }
       );
       const payload = (await response.json()) as {
         quote?: Quote;
@@ -57,11 +69,14 @@ export function QuotesTool() {
       }
       setQuote(payload.quote);
     } catch (caught) {
+      // A superseded request must leave `busy` alone — the one that replaced
+      // it now owns the loading state.
+      if (controller.signal.aborted) return;
       setError(
         caught instanceof Error ? caught.message : "Couldn't load a quote."
       );
     } finally {
-      setBusy(false);
+      if (!controller.signal.aborted) setBusy(false);
     }
   }, []);
 
@@ -121,7 +136,11 @@ export function QuotesTool() {
           aria-hidden
           className="text-primary/10 pointer-events-none absolute -top-4 -left-2 size-32"
         />
-        <CardContent className="relative flex min-h-72 flex-col justify-center gap-6 py-12 sm:py-16">
+        <CardContent
+          aria-live="polite"
+          aria-busy={busy}
+          className="relative flex min-h-72 flex-col justify-center gap-6 py-12 sm:py-16"
+        >
           {error ? (
             <Alert variant="destructive">
               <TriangleAlert />

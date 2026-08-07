@@ -10,11 +10,6 @@ const nextConfig: NextConfig = {
   // Don't let `next dev` write AGENTS.md / CLAUDE.md into the repo root.
   agentRules: false,
 
-  // Only ship the icon modules that are actually imported.
-  experimental: {
-    optimizePackageImports: ["lucide-react", "cmdk"],
-  },
-
   images: {
     formats: ["image/avif", "image/webp"],
   },

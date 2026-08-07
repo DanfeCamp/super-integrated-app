@@ -1,0 +1,356 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* -------------------------------------------------------------------------- */
+/*  Design tokens                                                             */
+/*                                                                            */
+/*  Colours are authored in OKLCH so light/dark pairs stay perceptually even   */
+/*  and hue shifts stay predictable when we tint surfaces.                     */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --radius: 0.75rem;
+
+  /* Surfaces — a barely-there cool tint keeps large white areas from glaring. */
+  --background: oklch(0.994 0.0015 264);
+  --foreground: oklch(0.21 0.017 266);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.017 266);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.017 266);
+
+  /* Brand — violet with enough chroma to feel deliberate, not neon. */
+  --primary: oklch(0.548 0.222 285.5);
+  --primary-foreground: oklch(0.985 0.002 264);
+  --primary-muted: oklch(0.955 0.02 285);
+
+  --secondary: oklch(0.968 0.004 264);
+  --secondary-foreground: oklch(0.28 0.02 266);
+  --muted: oklch(0.968 0.004 264);
+  --muted-foreground: oklch(0.517 0.017 265);
+  --accent: oklch(0.962 0.012 285);
+  --accent-foreground: oklch(0.33 0.06 285);
+
+  --destructive: oklch(0.585 0.215 27.3);
+  --destructive-foreground: oklch(0.985 0.002 264);
+  /* Dark enough to pass 4.5:1 as small text on --card. */
+  --success: oklch(0.487 0.126 158);
+  --success-foreground: oklch(0.985 0.002 264);
+  --warning: oklch(0.72 0.17 68);
+  --warning-foreground: oklch(0.24 0.04 68);
+
+  --border: oklch(0.917 0.005 264);
+  --input: oklch(0.917 0.005 264);
+  --ring: oklch(0.548 0.222 285.5);
+
+  /* Layered shadows — small ambient + directional, never a single hard drop. */
+  --shadow-color: 264 30% 20%;
+  --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.05);
+  --shadow-sm:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.08),
+    0 1px 3px 0 hsl(var(--shadow-color) / 0.06);
+  --shadow-md:
+    0 2px 4px -2px hsl(var(--shadow-color) / 0.07),
+    0 4px 12px -2px hsl(var(--shadow-color) / 0.08);
+  --shadow-lg:
+    0 4px 8px -4px hsl(var(--shadow-color) / 0.08),
+    0 12px 28px -6px hsl(var(--shadow-color) / 0.12);
+  --shadow-xl:
+    0 8px 16px -8px hsl(var(--shadow-color) / 0.1),
+    0 24px 48px -12px hsl(var(--shadow-color) / 0.16);
+}
+
+.dark {
+  --background: oklch(0.161 0.012 266);
+  --foreground: oklch(0.961 0.004 264);
+  --card: oklch(0.199 0.014 266);
+  --card-foreground: oklch(0.961 0.004 264);
+  --popover: oklch(0.199 0.014 266);
+  --popover-foreground: oklch(0.961 0.004 264);
+
+  --primary: oklch(0.706 0.176 287);
+  --primary-foreground: oklch(0.165 0.03 285);
+  --primary-muted: oklch(0.28 0.06 285);
+
+  --secondary: oklch(0.256 0.015 266);
+  --secondary-foreground: oklch(0.93 0.006 264);
+  --muted: oklch(0.256 0.015 266);
+  --muted-foreground: oklch(0.686 0.016 265);
+  --accent: oklch(0.276 0.03 285);
+  --accent-foreground: oklch(0.92 0.02 285);
+
+  --destructive: oklch(0.653 0.19 25);
+  --destructive-foreground: oklch(0.985 0.002 264);
+  --success: oklch(0.7 0.14 160);
+  --success-foreground: oklch(0.16 0.03 160);
+  --warning: oklch(0.79 0.15 72);
+  --warning-foreground: oklch(0.2 0.04 72);
+
+  --border: oklch(0.279 0.015 266);
+  --input: oklch(0.302 0.016 266);
+  --ring: oklch(0.706 0.176 287);
+
+  --shadow-color: 264 60% 2%;
+  --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.3);
+  --shadow-sm:
+    0 1px 2px -1px hsl(var(--shadow-color) / 0.4),
+    0 1px 3px 0 hsl(var(--shadow-color) / 0.35);
+  --shadow-md:
+    0 2px 4px -2px hsl(var(--shadow-color) / 0.4),
+    0 4px 12px -2px hsl(var(--shadow-color) / 0.45);
+  --shadow-lg:
+    0 4px 8px -4px hsl(var(--shadow-color) / 0.45),
+    0 12px 28px -6px hsl(var(--shadow-color) / 0.5);
+  --shadow-xl:
+    0 8px 16px -8px hsl(var(--shadow-color) / 0.5),
+    0 24px 48px -12px hsl(var(--shadow-color) / 0.6);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-muted: var(--primary-muted);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --radius-xs: calc(var(--radius) - 6px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.4s ease-out both;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-pop: pop 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 12px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Base                                                                      */
+/* -------------------------------------------------------------------------- */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "cv02" 1,
+      "cv03" 1,
+      "cv04" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* One focus treatment everywhere, driven by keyboard intent only. */
+  :focus-visible {
+    @apply outline-ring/70 outline-2 outline-offset-2;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+
+  /* Headings tighten as they grow so large type doesn't drift apart. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-balance;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    letter-spacing: -0.032em;
+  }
+
+  /* Number inputs: hide spinners, we always pair them with better controls. */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Native colour swatch chrome differs wildly per browser; strip it. */
+  input[type="color"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: calc(var(--radius) - 2px);
+  }
+  input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: calc(var(--radius) - 2px);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+    background-clip: content-box;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Utilities                                                                 */
+/* -------------------------------------------------------------------------- */
+
+@utility container-page {
+  @apply mx-auto w-full max-w-[92rem] px-4 sm:px-6 lg:px-8;
+}
+
+/* Wordmark / hero emphasis gradient. */
+@utility text-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--foreground) 0%,
+    var(--foreground) 30%,
+    var(--primary) 78%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sticky translucent chrome (header, floating bars). */
+@utility surface-glass {
+  @apply bg-background/72 supports-[backdrop-filter]:bg-background/55;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+}
+
+/* Faint dotted field used behind the hero. */
+@utility bg-dot-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--border) 1px,
+    transparent 0
+  );
+  background-size: 22px 22px;
+}
+
+/* Stagger entrance animations: `animate-delay-80` → 80ms. */
+@utility animate-delay-* {
+  animation-delay: calc(--value(integer) * 1ms);
+}
+
+/* Skeleton sweep — pure background animation, no layout cost. */
+@utility shimmer {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--foreground) 7%, transparent) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}

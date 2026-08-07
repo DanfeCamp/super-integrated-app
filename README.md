@@ -29,14 +29,19 @@ tags, the sitemap and JSON-LD all resolve correctly. It defaults to
 ## The tools
 
 **Everyday** — Calculator · Currency Converter · Interest Calculator ·
-Stopwatch · Countdown · World Clock · To-Do List
+Loan Calculator · Percentage Calculator · Unit Converter · Stopwatch ·
+Countdown · Pomodoro Timer · World Clock · To-Do List
 
 **Images & Media** — Image Compressor · Image Converter · Image Editor ·
-Audio to WAV Converter
+Image Resizer · Audio to WAV Converter
 
-**Text & Language** — Translator · Sort Lists · Name Generator
+**Text & Language** — Translator · Word Counter · Case Converter ·
+Diff Checker · Sort Lists · Name Generator
 
-**Web & Developer** — QR Code Generator · Sitemap Compiler · Colour Generator ·
+**Web & Developer** — JSON Formatter · Regex Tester ·
+CSV to JSON Converter · Base64 Encoder & Decoder · JWT Decoder ·
+UUID Generator · Hash Generator · URL Parser · Cron Expression Helper ·
+QR Code Generator · Sitemap Compiler · Colour Generator ·
 Password Generator · Cookie Inspector
 
 **Fun & Inspiration** — Quotes · Tic-Tac-Toe

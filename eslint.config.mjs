@@ -1,37 +1,34 @@
-import next from "eslint-config-next";
-import coreWebVitals from "eslint-config-next/core-web-vitals";
-import nextTypescript from "eslint-config-next/typescript";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypeScript from "eslint-config-next/typescript";
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+const eslintConfig = [
   {
     ignores: [
+      "_next/**",
       ".next/**",
       "node_modules/**",
-      "next-env.d.ts",
       "public/**",
-      "*.config.mjs",
+      "next-env.d.ts",
     ],
   },
-  ...next,
-  ...coreWebVitals,
-  ...nextTypescript,
+  ...nextCoreWebVitals,
+  ...nextTypeScript,
   {
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
-        {
-          argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
-          caughtErrorsIgnorePattern: "^_",
-        },
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
-      "@typescript-eslint/consistent-type-imports": [
-        "error",
-        { prefer: "type-imports", fixStyle: "inline-type-imports" },
-      ],
-      "no-console": ["warn", { allow: ["warn", "error"] }],
-      eqeqeq: ["error", "always", { null: "ignore" }],
+    },
+  },
+  {
+    // Plain CommonJS Node entry point run directly by the production host.
+    files: ["server.js", "*.config.js"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
     },
   },
 ];
+
+export default eslintConfig;

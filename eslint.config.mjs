@@ -5,7 +5,6 @@ import nextTypeScript from "eslint-config-next/typescript";
 const eslintConfig = [
   {
     ignores: [
-      "_next/**",
       ".next/**",
       "node_modules/**",
       "public/**",
